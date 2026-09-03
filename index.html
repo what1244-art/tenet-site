@@ -169,7 +169,7 @@
   /* premium layer */
   .serif{font-family:"Noto Serif KR",serif}
   .kicker .num{font-family:"Noto Serif KR",serif;font-weight:600;font-size:12px;color:var(--mute);letter-spacing:.14em;margin-right:4px}
-  html.smooth{scroll-behavior:auto}
+  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
   /* hero line mask reveal */
   .hero h1 .ln{display:block;overflow:hidden}
   .hero h1 .ln>span{display:block;transform:translateY(110%);animation:lnup 1s cubic-bezier(.2,.8,.2,1) forwards}
@@ -217,6 +217,7 @@
   :focus-visible{outline:2px solid var(--or);outline-offset:3px}
   @media (prefers-reduced-motion: reduce){
     *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .flip-out{animation:none!important;opacity:1}
     .rv{opacity:1;transform:none}
     .marq .track{animation:none;transform:none}
   }
@@ -238,13 +239,15 @@
   @media(max-width:860px){.snd{display:none}}
   /* horizontal works (desktop) */
   @media(min-width:1100px){
-    .hwrap{height:260vh;position:relative}
-    .hsticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
-    .wgrid.htrack{display:flex;gap:24px;padding:0 28px;will-change:transform;grid-template-columns:none}
+    .hwrap{height:auto;position:relative}
+    .hsticky{position:static;height:auto;overflow:visible;display:block;padding:8px 0 4px}
+    .wgrid.htrack{display:flex;gap:24px;padding:4px 28px 18px;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;cursor:grab}
+    .wgrid.htrack::-webkit-scrollbar{display:none}
+    .htrack .w{scroll-snap-align:start}
     .htrack .w.big,.htrack .w.mid,.htrack .w.sm{grid-column:auto}
     .htrack .w{flex:0 0 auto;width:min(560px,42vw);height:min(560px,66vh);min-height:0}
     .htrack .w.sm{width:min(420px,32vw)}
-    .hprog{position:absolute;left:28px;right:28px;bottom:34px;height:1px;background:#2A2A30}
+    .hprog{position:static;margin:14px 28px 0;height:1px;background:#2A2A30}
     .hprog i{display:block;height:100%;width:0;background:var(--or)}
     .works .head{margin-bottom:24px}
     .works{padding-bottom:0}
@@ -822,7 +825,8 @@ function initRipple(){
   const mobile=window.matchMedia('(max-width:860px)').matches;
   const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let gl=null;try{gl=cv.getContext('webgl')||cv.getContext('experimental-webgl')}catch(e){}
-  if(!gl||reduce||!window.THREE){hero.classList.add('nogl');const fb=hero.querySelector('.fallback');if(fb&&fb.dataset.src)fb.src=fb.dataset.src;return}
+  function showFallback(){hero.classList.add('nogl');const fb=hero.querySelector('.fallback');if(fb&&fb.dataset.src)fb.src=fb.dataset.src}
+  if(!gl||!window.THREE){showFallback();return}
 
   const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,powerPreference:'high-performance'});
   renderer.setPixelRatio(Math.min(window.devicePixelRatio,mobile?1.3:1.7));
@@ -972,13 +976,7 @@ initRipple();
   document.querySelectorAll('[data-img]').forEach(el=>el.addEventListener('click',()=>{box.classList.add('img');f.style.display='none';im.style.display='block';im.src=el.dataset.img;t.textContent=el.dataset.t||'';lb.classList.add('open');document.body.style.overflow='hidden'}));
   const reset=()=>{box.classList.remove('img');f.style.display='';im.style.display='none';im.src=''};
   document.getElementById('lbx').addEventListener('click',reset);lb.addEventListener('click',e=>{if(e.target===lb)reset()});addEventListener('keydown',e=>{if(e.key==='Escape')reset()})})();
-// smooth scroll (wheel lerp, desktop only)
-(function(){if(matchMedia('(hover:none)').matches||matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-  document.documentElement.classList.add('smooth');let target=scrollY,cur=scrollY,raf=null;
-  addEventListener('wheel',e=>{if(e.ctrlKey)return;e.preventDefault();target=Math.max(0,Math.min(document.documentElement.scrollHeight-innerHeight,target+e.deltaY));if(!raf)raf=requestAnimationFrame(tick)},{passive:false});
-  addEventListener('scroll',()=>{if(!raf){target=cur=scrollY}},{passive:true});
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(!t)return;e.preventDefault();target=t.getBoundingClientRect().top+scrollY-72;if(!raf)raf=requestAnimationFrame(tick)}));
-  function tick(){cur+=(target-cur)*.12;if(Math.abs(target-cur)<.5){cur=target;scrollTo(0,cur);raf=null;return}scrollTo(0,cur);raf=requestAnimationFrame(tick)}})();
+// 네이티브 스크롤 사용 (구 휠 하이재킹 제거 — 캐러셀 차단·버벅임 원인)
 // magnetic buttons
 (function(){if(matchMedia('(hover:none)').matches)return;document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.18,y=(e.clientY-r.top-r.height/2)*.28;b.style.transform=`translate(${x}px,${y}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})})();
 // parallax
@@ -996,10 +994,16 @@ initRipple();
   const beep=(f,d,g)=>{if(!on)return;ac=ac||new (AudioContext||webkitAudioContext)();const o=ac.createOscillator(),v=ac.createGain();o.type='sine';o.frequency.value=f;v.gain.value=0;o.connect(v);v.connect(ac.destination);const t=ac.currentTime;v.gain.linearRampToValueAtTime(g,t+.005);v.gain.exponentialRampToValueAtTime(.0001,t+d);o.start(t);o.stop(t+d)};
   b.addEventListener('click',()=>{on=!on;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.lastChild.textContent=on?'SOUND ON':'SOUND OFF';if(on)beep(880,.08,.05)});
   document.querySelectorAll('a,button,.chips button,.row,.w,summary').forEach(el=>{el.addEventListener('pointerenter',()=>beep(1320,.03,.012));el.addEventListener('click',()=>beep(660,.07,.04))})})();
-// horizontal works
-(function(){const wrap=document.getElementById('hwrap'),track=document.getElementById('htrack'),prog=document.getElementById('hprog');if(!wrap||!track)return;
-  function upd(){if(innerWidth<1100){track.style.transform='';return}const r=wrap.getBoundingClientRect();const total=wrap.offsetHeight-innerHeight;const p=Math.max(0,Math.min(1,-r.top/total));const max=track.scrollWidth-innerWidth+56;track.style.transform=`translateX(${-p*max}px)`;prog.style.width=(p*100)+'%'}
-  addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd()})();
+// horizontal works — 진짜 가로 스크롤 레일 (휠·드래그·터치)
+(function(){const track=document.getElementById('htrack'),prog=document.getElementById('hprog');if(!track)return;
+  function upd(){const max=track.scrollWidth-track.clientWidth;if(prog)prog.style.width=(max>0?Math.min(1,track.scrollLeft/max)*100:0)+'%'}
+  track.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
+  track.addEventListener('wheel',e=>{if(innerWidth<1100)return;if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){e.preventDefault();track.scrollLeft+=e.deltaY}},{passive:false});
+  let down=false,sx=0,sl=0,moved=false;
+  track.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=track.scrollLeft;track.style.cursor='grabbing'});
+  addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;track.scrollLeft=sl-dx});
+  addEventListener('pointerup',()=>{down=false;track.style.cursor=''});
+  track.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true)})();
 // device orientation parallax (mobile hero)
 (function(){if(!matchMedia('(hover:none)').matches||!window.DeviceOrientationEvent)return;const h=document.querySelector('.hero .wrap');if(!h)return;
   addEventListener('deviceorientation',e=>{const x=Math.max(-1,Math.min(1,(e.gamma||0)/30)),y=Math.max(-1,Math.min(1,((e.beta||0)-45)/30));h.style.transform=`translate(${x*8}px,${y*6}px)`},{passive:true})})();
