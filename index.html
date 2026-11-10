@@ -470,7 +470,7 @@
     <dl class="meta">
       <dt>설립</dt><dd>2024년 10월, 서울 성북구 돌곶이로9길 14</dd>
       <dt>지금</dt><dd>AI 음악 소프트웨어 개발사 5개월 상주 진행 중 (2026.9~)</dd>
-      <dt>다음</dt><dd>팔레트 온 스테이지 : Chroma, 2026년 11월 <b id="dday" style="color:var(--or2)"></b></dd>
+      <dt>공연</dt><dd>연극 〈가로묘지 주식회사〉 주최·주관 <b id="dday" data-date="" style="color:var(--or2)"></b></dd>
     </dl>
     <div class="btns">
       <a class="btn or" href="#contact">제작 문의하기</a>
@@ -731,8 +731,8 @@
       </a>
       <a class="tile rv d2" href="https://www.instagram.com/tenet_ent/">
         <div>
-          <h3>팔레트 온 스테이지</h3>
-          <p>인디 아티스트를 큐레이션해 무대에 세우는 자체 기획 공연. 2026년 11월 두 번째 에디션 Chroma.</p>
+          <h3>연극 〈가로묘지 주식회사〉</h3>
+          <p>집값에 밀려 묘지의 관을 빌려 사는 사람들 이야기. 작 황수아, 연출 정단아. 테넷이 주최·주관하는 무료 공연입니다.</p>
         </div>
         <div class="go">공연 소식 →</div>
       </a>
@@ -994,8 +994,8 @@ if(window.THREE)initRipple();else document.querySelector('script[src*=three]').a
   const build=()=>{const g=n=>document.querySelector(`#inq [name=${n}]`).value.trim();if(g('website'))return '';return `[테넷 제작 문의]\n회사: ${g('org')}\n담당: ${g('who')}\n필요한 것: ${g('need')}\n내용: ${g('msg')}`};
   document.getElementById('sendSms').addEventListener('click',()=>{const f=document.getElementById('inq');if(!f.reportValidity())return;const b=build();if(!b)return;location.href='sms:01030813730?&body='+encodeURIComponent(b)});
   document.getElementById('copyMsg').addEventListener('click',async()=>{const f=document.getElementById('inq');if(!f.reportValidity())return;try{await navigator.clipboard.writeText(build());ok.textContent='복사했습니다. 카톡이나 메일에 붙여넣어 주세요.'}catch(e){ok.textContent='복사가 안 되면 내용을 직접 선택해 주세요.'}setTimeout(()=>ok.textContent='',4000)})})();
-// D-day
-(function(){const el=document.getElementById('dday');if(!el)return;const t=new Date('2026-11-14T00:00:00+09:00');const d=Math.ceil((t-new Date())/864e5);el.textContent=d>0?`D-${d}`:(d===0?'D-Day':'')})();
+// D-day: 공연 첫날이 확정되면 #dday의 data-date에 YYYY-MM-DD를 넣는다
+(function(){const el=document.getElementById('dday');if(!el||!el.dataset.date)return;const t=new Date(el.dataset.date+'T00:00:00+09:00');if(isNaN(t))return;const d=Math.ceil((t-new Date())/864e5);el.textContent=d>0?`D-${d}`:(d===0?'D-Day':'')})();
 // works filter
 (function(){const bs=[...document.querySelectorAll('#filt button')],cards=[...document.querySelectorAll('.wgrid .w')];
   bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;cards.forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.cat!==f))}))})();
