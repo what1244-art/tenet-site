@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>테넷 엔터테인먼트 | 음악 제작 프로덕션, 서울</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230B0B0D'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FF5A1F'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310172C'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23FFB54A'/%3E%3C/svg%3E">
 <meta property="og:title" content="테넷 엔터테인먼트 — 일반 녹음실이 아닙니다. 제작 프로덕션입니다.">
 <meta property="og:description" content="작곡가 10인, 세션, 보컬, 엔지니어, 영상, 공연 기획팀이 한 건물에. 라프텔 애니메이션 오프닝, 선거송, KBS 편집, 위러브 총보.">
 <meta property="og:image" content="https://www.tenet-ent.co.kr/og.jpg">
@@ -16,1057 +16,467 @@
 <meta name="naver-site-verification" content="76cafea75374cd9f3c22aecf8e4b43d1f0c8bd0b" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#0E0D0C">
-<!-- 애널리틱스: 배포 후 GA4 또는 네이버 애널리틱스 코드를 이 자리에 넣으세요 -->
+<meta name="theme-color" content="#10172C">
+<!-- 애널리틱스: GA4 또는 네이버 애널리틱스 코드를 이 자리에 넣으세요 -->
 <meta name="description" content="라프텔 애니메이션 오프닝, 선거송, KBS 편집까지. 세션 연주자와 공연 기획팀이 함께 있는 서울 성북구 음악 제작 프로덕션. 30여 종 마이크, Dynaudio Core 47, Apollo x8, Big Six 콘솔.">
-<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css">
+<link rel="preload" as="image" href="assets/img-04.webp" fetchpriority="high">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600;900&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --bk:#0E0D0C; --bk2:#171614; --wh:#FFFFFF; --pa:#F4F1EA;
-    --or:#FF5A1F; --or2:#FF7A45; --ink:#111114; --mute:#6E6E76; --line:#E4E2DC;
-    --max:1240px; --pine:#CFC9BC; --pine-dim:#8E8A80;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:"Pretendard Variable",Pretendard,-apple-system,"Noto Sans KR",sans-serif;color:var(--ink);background:var(--wh);-webkit-font-smoothing:antialiased;line-height:1.5;word-break:keep-all}
-  a{color:inherit;text-decoration:none}
-  img{display:block;max-width:100%}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px}
-
-  /* nav */
-  .nav{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px 28px;color:#fff;transition:background .25s,color .25s}
-  .nav.dark{background:rgba(255,255,255,.92);color:var(--ink);backdrop-filter:blur(8px)}
-  .nav.dark .cta{border-color:var(--ink);background:var(--ink);color:#fff}
-  .nav .mark{font-weight:900;letter-spacing:.14em;font-size:15px;display:flex;align-items:center;gap:10px}
-  .nav .mark i{width:10px;height:10px;border-radius:50%;background:var(--or);box-shadow:0 0 0 0 rgba(255,90,31,.6);animation:rec 1.6s infinite}
-  @keyframes rec{0%{box-shadow:0 0 0 0 rgba(255,90,31,.55)}70%{box-shadow:0 0 0 12px rgba(255,90,31,0)}100%{box-shadow:0 0 0 0 rgba(255,90,31,0)}}
-  .nav ul{display:flex;gap:28px;list-style:none;font-size:14px;font-weight:600}
-  .nav ul a{position:relative;padding:4px 0}
-  .nav ul a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:1.5px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s}
-  .nav ul a:hover::after,.nav ul a.act::after{transform:scaleX(1)}
-  .nav .burger{display:none;width:40px;height:40px;border:1.5px solid currentColor;border-radius:2px;background:transparent;color:inherit;cursor:pointer;position:relative}
-  .nav .burger i{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:.25s}
-  .nav .burger i:nth-child(1){top:14px}.nav .burger i:nth-child(2){top:19px}.nav .burger i:nth-child(3){top:24px}
-  .nav.open .burger i:nth-child(1){top:19px;transform:rotate(45deg)}.nav.open .burger i:nth-child(2){opacity:0}.nav.open .burger i:nth-child(3){top:19px;transform:rotate(-45deg)}
-  .mnav{position:fixed;inset:0;background:var(--bk);color:#fff;z-index:49;display:none;flex-direction:column;justify-content:center;padding:0 28px;gap:6px}
-  .mnav.open{display:flex}
-  .mnav a{font-size:30px;font-weight:900;padding:12px 0;border-bottom:1px solid #2A2A30;letter-spacing:-.02em}
-  .mnav a.or{color:var(--or);border:0;margin-top:10px}
-  .mnav small{color:#7A7A83;font-size:13px;margin-top:22px}
-  .nav .cta{border:1.5px solid #fff;padding:9px 16px;border-radius:2px;font-size:13px;font-weight:700}
-  @media(max-width:860px){.nav ul{display:none}.nav .cta{display:none}.nav .burger{display:block}.hero h1{max-width:10ch}}
-
-  /* hero */
-  .hero{position:relative;background:var(--bk);color:#fff;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
-  .hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab}
-  .hero canvas:active{cursor:grabbing}
-  .hero .wm{display:none;position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);font-size:clamp(160px,26vw,420px);font-weight:900;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(255,90,31,.18);pointer-events:none;user-select:none;z-index:1;line-height:1}
-  .hero .rec{position:absolute;right:28px;top:78px;z-index:3;display:flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.12em;color:#fff;font-variant-numeric:tabular-nums}
-  .hero .rec i{width:9px;height:9px;border-radius:50%;background:#FF2D2D;animation:blink 1s steps(2) infinite}
-  @keyframes blink{50%{opacity:.15}}
-  .flip{display:inline-block;position:relative;color:var(--or);perspective:600px;vertical-align:bottom}
-  .flip-in{display:inline-block;transform-origin:50% 100%;animation:flipin .6s cubic-bezier(.2,.8,.2,1) both}
-  .flip-out{animation:flipout .35s ease-in both}
-  @keyframes flipin{from{opacity:0;transform:rotateX(-80deg) translateY(.15em)}to{opacity:1;transform:none}}
-  @keyframes flipout{to{opacity:0;transform:rotateX(70deg) translateY(-.15em)}}
-  .btn.mic{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:transparent;cursor:pointer;font-family:inherit}
-  .btn.mic i{width:10px;height:10px;border-radius:50%;background:#fff;opacity:.5}
-  .btn.mic.on{border-color:var(--or);color:var(--or)}
-  .btn.mic.on i{background:var(--or);opacity:1;animation:rec 1.2s infinite}
-  @media(max-width:860px){.hero .wm{display:none;top:36%}.hero .rec{top:70px;right:20px}}
-  .hero img.fallback{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:0;transition:opacity .4s}
-  .hero.nogl img.fallback{opacity:.85}
-  .hero.nogl canvas{display:none}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,11,13,.2) 0%,rgba(11,11,13,0) 30%,rgba(11,11,13,.55) 65%,var(--bk) 100%);pointer-events:none}
-  /* scroll reveal */
-  /* intro */
-  .intro{position:fixed;inset:0;background:var(--bk);z-index:200;display:grid;place-items:center;transition:opacity .5s,visibility .5s}
-  .intro.off{opacity:0;visibility:hidden}
-  .intro .m{display:flex;align-items:center;gap:14px;color:#fff;font-weight:900;letter-spacing:.2em;font-size:20px}
-  .intro .m i{width:12px;height:12px;border-radius:50%;background:var(--or);animation:rec 1s infinite}
-  .intro .m span{overflow:hidden;display:inline-block}
-  .intro .m span b{display:inline-block;transform:translateY(110%);animation:rise .6s .15s cubic-bezier(.2,.8,.2,1) forwards}
-  @keyframes rise{to{transform:none}}
-  /* progress */
-  .svc,.proc,.faq,.press,.map,.studio,.spaces,.team,.cta,footer{content-visibility:auto;contain-intrinsic-size:auto 700px}
-  .prog{position:fixed;left:0;top:0;height:2px;background:var(--or);width:100%;z-index:60;transform:scaleX(0);transform-origin:0 50%}
-  /* cursor */
-  .cur{position:fixed;left:0;top:0;width:10px;height:10px;border-radius:50%;background:var(--or);pointer-events:none;z-index:300;transform:translate(-50%,-50%);transition:width .2s,height .2s,opacity .2s;mix-blend-mode:difference;opacity:0}
-  .cur.on{opacity:1}
-  .cur.big{width:44px;height:44px;background:#fff}
-  @media(hover:none){.cur{display:none}}
-  /* lightbox */
-  .lb{position:fixed;inset:0;background:rgba(11,11,13,.92);z-index:150;display:none;place-items:center;padding:24px}
-  .lb.open{display:grid}
-  .lb .box{width:min(960px,100%);aspect-ratio:16/9;background:#000;position:relative}
-  .lb iframe{width:100%;height:100%;border:0;display:block}
-  .lb .x{position:absolute;right:0;top:-44px;color:#fff;font-size:13px;font-weight:700;letter-spacing:.1em;background:transparent;border:1.5px solid rgba(255,255,255,.5);padding:8px 14px;cursor:pointer;font-family:inherit}
-  .lb .t{position:absolute;left:0;top:-40px;color:#fff;font-size:14px;font-weight:700}
-  /* inquiry form */
-  .form{margin-top:40px;background:var(--bk);color:#fff;padding:36px;border-radius:2px;display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
-  .form h3{grid-column:1/-1;font-size:18px;font-weight:900;margin-bottom:4px}
-  .form label{display:block;font-size:12px;font-weight:700;color:#9A9AA3;letter-spacing:.06em;margin-bottom:6px}
-  .form input,.form textarea{width:100%;background:#141418;border:1.5px solid #2A2A30;color:#fff;padding:13px 14px;font-family:inherit;font-size:15px;border-radius:2px;outline:0;transition:border .15s}
-  .form input:focus,.form textarea:focus{border-color:var(--or)}
-  .form textarea{min-height:110px;resize:vertical}
-  .form .full{grid-column:1/-1}
-  .form .acts{grid-column:1/-1;display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:6px}
-  .form .note{grid-column:1/-1;font-size:12px;color:#7A7A83}
-  .form .ok{font-size:13px;color:var(--or2);font-weight:700}
-  @media(max-width:760px){.form{grid-template-columns:1fr;padding:24px}}
-  /* mobile sticky bar + top */
-  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:48;display:none;grid-template-columns:1fr 1fr;background:var(--bk);border-top:1px solid #2A2A30}
-  .sticky a{padding:16px;text-align:center;font-weight:800;font-size:15px;color:#fff}
-  .sticky a.or{background:var(--or)}
-  @media(max-width:860px){.sticky{display:grid}body{padding-bottom:56px}}
-  .totop{position:fixed;right:24px;bottom:24px;width:46px;height:46px;border:1.5px solid var(--ink);background:var(--wh);color:var(--ink);border-radius:2px;display:grid;place-items:center;font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transition:.25s;z-index:47;font-family:inherit}
-  .totop.on{opacity:1;pointer-events:auto}
-  @media(max-width:860px){.totop{bottom:72px}}
-  /* works filter */
-  .filt{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:28px}
-  .filt button{font-family:inherit;font-size:13px;font-weight:700;padding:9px 14px;border:1.5px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;border-radius:2px;transition:.15s}
-  .filt button.on,.filt button:hover{border-color:var(--ink);background:var(--ink);color:#fff}
-  .w.hide{display:none}
-  /* process */
-  .proc{background:var(--wh)}
-  .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:0;margin-top:56px;border-top:1.5px solid var(--ink)}
-  .step{padding:26px 22px 26px 0;border-right:1px solid var(--line);position:relative}
-  .step:last-child{border-right:0}
-  .step .d{font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--or);margin-bottom:10px}
-  .step h3{font-size:18px;font-weight:900;letter-spacing:-.01em;margin-bottom:8px}
-  .step p{font-size:14px;color:var(--mute);line-height:1.6}
-  @media(max-width:900px){.steps{grid-template-columns:1fr}.step{border-right:0;border-bottom:1px solid var(--line);padding:20px 0}}
-  /* faq */
-  .faq{background:var(--pa)}
-  .qa{border-top:1.5px solid var(--ink);margin-top:48px}
-  .qa details{border-bottom:1px solid var(--line)}
-  .qa summary{list-style:none;cursor:pointer;padding:22px 0;font-size:18px;font-weight:800;display:flex;justify-content:space-between;align-items:center;gap:20px}
-  .qa summary::-webkit-details-marker{display:none}
-  .qa summary::after{content:"+";font-size:24px;font-weight:300;color:var(--or);transition:transform .2s}
-  .qa details[open] summary::after{transform:rotate(45deg)}
-  .qa .a{padding:0 0 24px;color:var(--ink-soft,#4b5563);font-size:15px;line-height:1.75;max-width:70ch}
-  /* map */
-  .map{background:var(--wh)}
-  .mapgrid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:48px;align-items:start}
-  .mapgrid iframe{width:100%;height:420px;border:0;filter:grayscale(1) contrast(1.05);border-radius:2px}
-  .addr div{padding:16px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.6}
-  .addr b{display:block;font-weight:800;margin-bottom:4px}
-  .addr span{color:var(--mute);font-size:14px}
-  @media(max-width:860px){.mapgrid{grid-template-columns:1fr}.mapgrid iframe{height:300px}}
-  /* row tap expand (mobile) */
-  @media(hover:none){.row.open .more{max-height:80px;opacity:1;margin-top:10px}}
-  .studio .ph{cursor:zoom-in}
-  .lb .box.case{aspect-ratio:auto;background:var(--pa);color:var(--ink);padding:44px 48px;max-width:720px}
-  .lb .case h3{font-size:26px;font-weight:900;letter-spacing:-.02em;margin-bottom:6px}
-  .lb .case .k{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--or);margin-bottom:22px}
-  .lb .case dl{display:grid;grid-template-columns:90px 1fr;gap:12px 20px;font-size:15px;line-height:1.7}
-  .lb .case dt{font-weight:800}.lb .case dd{color:var(--ink-soft,#4b5563)}
-  .lb .box.img{aspect-ratio:auto;background:transparent;display:grid;place-items:center}
-  .lb .box.img img{max-width:100%;max-height:80vh;display:block}
-  .skip{position:absolute;left:-999px;top:8px;background:var(--or);color:#fff;padding:10px 14px;z-index:400;font-weight:800}
-  .skip:focus{left:8px}
-  /* premium layer */
-  .serif{font-family:"Noto Serif KR",serif}
-  .kicker .num{font-family:"Noto Serif KR",serif;font-weight:600;font-size:12px;color:var(--mute);letter-spacing:.14em;margin-right:4px}
-  @media (prefers-reduced-motion: no-preference){html{scroll-behavior:smooth}}
-  /* hero line mask reveal */
-  .hero h1 .ln{display:block;overflow:hidden}
-  .hero h1 .ln>span{display:block;transform:translateY(110%);animation:lnup 1s cubic-bezier(.2,.8,.2,1) forwards}
-  .hero h1 .ln:nth-child(2)>span{animation-delay:.12s}
-  @keyframes lnup{to{transform:none}}
-  .hero p,.hero .meta,.hero .btns,.hero .eyebrow{animation:fadeup 1s .35s cubic-bezier(.2,.8,.2,1) both}
-  @keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  /* magnetic */
-  .btn{will-change:transform}
-  /* image parallax + reveal */
-  .w img,.studio .ph img{will-change:transform}
-  .studio .ph{overflow:hidden}
-  .studio .ph img{transform:scale(1.06)}
-  /* cursor label */
-  .cur .lbl{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--bk);opacity:0;transition:opacity .15s;white-space:nowrap}
-  .cur.lab{width:64px;height:64px;background:var(--or);mix-blend-mode:normal}
-  .cur.lab .lbl{opacity:1;color:#fff}
-  /* marquee refine */
-  .marq{background:var(--bk);color:var(--pine);border-top:1px solid #2A2A30;border-bottom:1px solid #2A2A30;padding:14px 0;font-weight:500;font-size:13px;letter-spacing:.06em;font-family:"Noto Serif KR",serif}
-  .marq .track{animation-duration:70s}
-  .marq span::after{content:"—";font-size:12px;opacity:.5;margin-left:28px;vertical-align:0}
-  /* cinematic band */
-  .cine{position:relative;height:72vh;min-height:420px;overflow:hidden;background:var(--bk)}
-  .cine img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 45%;will-change:transform;transform:scale(1.12)}
-  .cine::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,13,12,.2),rgba(14,13,12,.55))}
-  .cine .cap{position:absolute;left:0;right:0;bottom:44px;color:#fff;z-index:2}
-  .cine .cap .q{font-family:"Noto Serif KR",serif;font-weight:600;font-size:clamp(22px,2.6vw,34px);line-height:1.45;max-width:26ch;letter-spacing:-.01em}
-  .cine .cap .src{margin-top:14px;font-size:12px;letter-spacing:.1em;color:var(--pine-dim);font-weight:700}
-  /* press */
-  .press{background:var(--pa)}
-  .press .q{font-family:"Noto Serif KR",serif;font-weight:600;font-size:clamp(24px,3.2vw,42px);line-height:1.4;letter-spacing:-.01em;max-width:28ch;margin-top:40px}
-  .press .q::before{content:"“";color:var(--or);margin-right:2px}
-  .press .q::after{content:"”";color:var(--or);margin-left:2px}
-  .press .src{margin-top:22px;font-size:13px;color:var(--mute);display:flex;gap:16px;align-items:center}
-  .press .src b{color:var(--ink);font-weight:800}
-  .press .src a{text-decoration:underline;text-underline-offset:4px}
-  /* people quotes serif */
-  .people q{font-family:"Noto Serif KR",serif;font-weight:400}
-  /* hairline refinements */
-  .row{border-bottom-width:1px}.svc .rows{border-top-width:1px}
-  .steps{border-top-width:1px}.qa{border-top-width:1px}
-  h2{letter-spacing:-.035em}
-  /* scrollbar / selection */
-  ::selection{background:var(--or);color:#fff}
-  :focus-visible{outline:2px solid var(--or);outline-offset:3px}
-  @media (prefers-reduced-motion: reduce){
-    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
-    .flip-out{animation:none!important;opacity:1}
-    .rv{opacity:1;transform:none}
-    .marq .track{animation:none;transform:none}
-  }
-  html{scrollbar-width:thin;scrollbar-color:var(--or) transparent}
-  ::-webkit-scrollbar{width:6px}::-webkit-scrollbar-thumb{background:var(--or);border-radius:3px}::-webkit-scrollbar-track{background:transparent}
-  /* hero scroll hint + live line */
-  .hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--pine-dim);font-size:11px;letter-spacing:.14em;font-weight:700}
-  .hint i{width:1px;height:34px;background:linear-gradient(var(--or),transparent);animation:drop 1.6s infinite}
-  @keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-  .live{position:absolute;left:28px;top:78px;z-index:3;font-size:12px;letter-spacing:.06em;color:var(--pine-dim);display:flex;gap:10px;align-items:center;font-variant-numeric:tabular-nums}
-  .live i{width:7px;height:7px;border-radius:50%;background:#3DDC84}
-  @media(max-width:860px){.live{display:none}.hint{display:none}}
-  /* sound toggle */
-  .snd{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:700;letter-spacing:.08em;background:transparent;border:0;color:inherit;cursor:pointer;font-family:inherit;margin-right:16px}
-  .snd i{display:inline-flex;gap:2px;align-items:flex-end;height:12px}
-  .snd i b{width:2px;height:4px;background:currentColor;transition:height .2s}
-  .snd.on i b:nth-child(1){animation:eq .6s infinite alternate}.snd.on i b:nth-child(2){animation:eq .5s .1s infinite alternate}.snd.on i b:nth-child(3){animation:eq .7s .2s infinite alternate}
-  @keyframes eq{to{height:12px}}
-  @media(max-width:860px){.snd{display:none}}
-  /* horizontal works (desktop) */
-  @media(min-width:1100px){
-    .hwrap{height:auto;position:relative}
-    .hsticky{position:static;height:auto;overflow:visible;display:block;padding:8px 0 4px}
-    .wgrid.htrack{display:flex;gap:24px;padding:4px 28px 18px;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;cursor:grab}
-    .wgrid.htrack::-webkit-scrollbar{display:none}
-    .htrack .w{scroll-snap-align:start}
-    .htrack .w.big,.htrack .w.mid,.htrack .w.sm{grid-column:auto}
-    .htrack .w{flex:0 0 auto;width:min(560px,42vw);height:min(560px,66vh);min-height:0}
-    .htrack .w.sm{width:min(420px,32vw)}
-    .hprog{position:static;margin:14px 28px 0;height:1px;background:#2A2A30}
-    .hprog i{display:block;height:100%;width:0;background:var(--or)}
-    .works .head{margin-bottom:24px}
-    .works{padding-bottom:0}
-  }
-  .rv{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
-  .rv.in{opacity:1;transform:none}
-  .rv.d1{transition-delay:.08s}.rv.d2{transition-delay:.16s}.rv.d3{transition-delay:.24s}.rv.d4{transition-delay:.32s}
-  .hero .wrap{position:relative;z-index:2;padding-bottom:64px;padding-top:140px}
-  .hero .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--or2);margin-bottom:22px}
-  .hero .eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--or)}
-  .hero h1{font-size:clamp(38px,6.4vw,92px);font-weight:900;line-height:1.02;letter-spacing:-.03em;max-width:15ch}
-  .hero p{margin-top:26px;font-size:clamp(16px,1.6vw,20px);max-width:52ch;color:#D8D6D0;font-weight:400;line-height:1.6}
-  .hero .meta{margin-top:26px;display:grid;grid-template-columns:auto 1fr;gap:5px 16px;font-size:13px;color:#A8A6A0;max-width:460px;border-top:1px solid rgba(255,255,255,.18);padding-top:14px}
-  .hero .meta dt{font-weight:700;color:var(--pine)}
-  .hero .btns{margin-top:30px;display:flex;gap:12px;flex-wrap:wrap}
-  .btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:2px;font-weight:800;font-size:15px;transition:transform .15s,background .15s}
-  .btn:hover{transform:translateY(-1px)}
-  .btn.or{background:var(--or);color:#fff}
-  .btn.or:hover{background:var(--or2)}
-  .btn.gh{border:1.5px solid rgba(255,255,255,.55);color:#fff}
-  .btn.gh:hover{border-color:#fff}
-  .btn.dk{background:var(--ink);color:#fff}
-  .btn.dk:hover{background:#000}
-
-  /* marquee */
-  .marq{background:var(--or);color:var(--bk);overflow:hidden;white-space:nowrap;padding:16px 0;font-weight:800;font-size:15px;letter-spacing:.02em}
-  .marq .track{display:inline-block;animation:slide 38s linear infinite}
-  .marq span{display:inline-block;padding:0 28px}
-  .marq span::after{content:"●";font-size:8px;vertical-align:middle;margin-left:28px;opacity:.6}
-  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-  /* section base */
-  section{padding:120px 0;scroll-margin-top:72px}
-  img{background:#1a1a1e}
-  .wgrid img,.studio img{aspect-ratio:auto}
-  .kicker{font-size:13px;font-weight:800;letter-spacing:.1em;color:var(--or);margin-bottom:18px;display:flex;align-items:center;gap:12px}
-  .kicker::before{content:"";width:22px;height:1.5px;background:var(--or)}
-  h2{font-size:clamp(32px,4.4vw,60px);font-weight:900;letter-spacing:-.03em;line-height:1.05}
-  .lead{font-size:18px;color:var(--mute);max-width:58ch;margin-top:20px;line-height:1.7}
-
-  /* works */
-  .works{background:var(--wh)}
-  .works .head{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
-  .wgrid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-  .w{position:relative;border-radius:6px;overflow:hidden;background:var(--bk2);color:#fff;min-height:320px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px}
-  .w.big{grid-column:span 7;min-height:520px}
-  .w.mid{grid-column:span 5;min-height:520px}
-  .w.sm{grid-column:span 4;min-height:300px}
-  .w.sm.rv.d2{background:var(--bk2);border:1.5px solid #2A2A30}
-  .w img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55;transition:transform .5s,opacity .3s;filter:saturate(.85)}
-  .w.big img{object-position:center 30%}
-  .w.mid img{object-position:center 60%;filter:saturate(.7) contrast(1.05)}
-  .w.sm.rv.d3 img{object-position:center 80%;filter:grayscale(.6)}
-  .w:hover img{transform:scale(1.03);opacity:.7}
-  .w::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(11,11,13,.9))}
-  .w .t{position:relative;z-index:2}
-  .w .cat{font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--or2);margin-bottom:10px}
-  .w h3{font-size:clamp(20px,2vw,28px);font-weight:900;letter-spacing:-.02em;line-height:1.2}
-  .w p{margin-top:8px;color:#C9C7C0;font-size:14px;line-height:1.55}
-  .w .play{position:absolute;top:22px;right:22px;z-index:2;width:44px;height:44px;border-radius:50%;background:var(--or);display:grid;place-items:center}
-  .w .play::after{content:"";border-left:14px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent;margin-left:3px}
-  .w.solid{background:var(--or);color:var(--bk)}
-  .w.solid::before{display:none}
-  .w.solid .cat{color:var(--bk);opacity:.7}
-  .w.solid p{color:var(--bk);opacity:.85}
-  .w.pale{background:var(--pa);color:var(--ink)}
-  .w.pale::before{display:none}
-  .w.pale .cat{color:var(--or)}
-  .w.pale p{color:var(--mute)}
-  @media(max-width:900px){.works .head{grid-template-columns:1fr}.w.big,.w.mid,.w.sm{grid-column:span 12;min-height:300px}}
-
-  /* infra builder */
-  .infra{background:var(--bk);color:#fff}
-  .bgrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:56px;align-items:start}
-  .chips{display:grid;grid-template-columns:1fr;border-top:1px solid #3A3A42}
-  .chips button{font-family:inherit;font-size:16px;font-weight:700;color:#fff;background:transparent;border:0;border-bottom:1px solid #2A2A30;padding:14px 4px;cursor:pointer;text-align:left;display:grid;grid-template-columns:22px 1fr;gap:14px;align-items:center;transition:.15s}
-  .chips button em{font-style:normal;font-size:12px;color:#7A7A83;font-weight:500}
-  .chips button:hover{background:rgba(255,255,255,.03)}
-  .chips .bx{width:16px;height:16px;border:1.5px solid #fff;position:relative}
-  .chips .bx::after{content:"";position:absolute;left:3px;top:-6px;width:5px;height:14px;border-right:3px solid var(--or);border-bottom:3px solid var(--or);transform:rotate(45deg) scale(0);transition:transform .18s}
-  .chips button.on .bx::after{transform:rotate(45deg) scale(1)}
-  .chips button.on{color:#fff}
-  .bpanel{padding-top:6px}
-  .bpanel .big{font-size:clamp(30px,3.6vw,48px);font-weight:900;letter-spacing:-.03em;line-height:1.25}
-  .bpanel .big b{color:var(--or);font-variant-numeric:tabular-nums}
-  .assign{list-style:none;margin-top:22px;border-top:1px solid #3A3A42}
-  .assign li{display:grid;grid-template-columns:110px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid #2A2A30;font-size:14px;line-height:1.5;animation:fadein .3s}
-  .assign li b{color:var(--or);font-weight:800}
-  .assign li span{color:#E6E4DE}
-  .assign li small{display:block;color:#7A7A83;font-size:12px;margin-top:2px}
-  @keyframes fadein{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
-  .bpanel .vs{margin-top:26px;border-top:1px solid #3A3A42;padding-top:16px;display:grid;grid-template-columns:auto 1fr;gap:8px 20px;font-size:14px}
-  .bpanel .vs dt{font-weight:700}.bpanel .vs dd{color:#B8B8C0}
-  .bpanel .hand{margin-top:22px;font-size:13px;color:#7A7A83}
-  .bpanel .btn{margin-top:26px}
-  @media(max-width:900px){.bgrid{grid-template-columns:1fr;gap:32px}}
-  /* stats */
-  .stats{background:var(--bk);color:#fff;padding:64px 0}
-  .stgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-  .st b{display:block;font-size:clamp(40px,5.5vw,76px);font-weight:900;letter-spacing:-.04em;line-height:1;color:var(--or);font-variant-numeric:tabular-nums}
-  .st>span{display:block;margin-top:10px;color:#9A9AA3;font-size:14px;font-weight:600}
-  @media(max-width:860px){.stgrid{grid-template-columns:1fr 1fr}}
-  /* typewriter */
-  .tw::after{content:"|";color:var(--or);animation:blink 1s steps(2) infinite;margin-left:2px}
-  .tw.done::after{display:none}
-  /* tilt */
-  .w{transform-style:preserve-3d;will-change:transform}
-  .fn{margin-top:22px;font-size:13px;color:var(--mute)}
-  /* services list */
-  .svc{background:var(--pa)}
-  .svc .rows{margin-top:56px;border-top:1.5px solid var(--ink)}
-  .row{display:grid;grid-template-columns:1.1fr 1.4fr auto;gap:32px;align-items:start;padding:34px 0;border-bottom:1.5px solid var(--ink);transition:background .2s}
-  .row:hover{background:rgba(255,90,31,.06)}
-  .row h3{font-size:clamp(22px,2.4vw,32px);font-weight:900;letter-spacing:-.02em}
-  .row p{color:var(--mute);font-size:16px;line-height:1.65}
-  .row .arr{width:52px;height:52px;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;font-size:20px;font-weight:300;transition:.2s}
-  .row:hover .arr{background:var(--or);border-color:var(--or);color:#fff}
-  .row .more{display:block;max-height:0;overflow:hidden;opacity:0;margin-top:0;font-size:13px;color:var(--ink);font-weight:600;transition:max-height .35s,opacity .35s,margin .35s}
-  .row:hover .more{max-height:60px;opacity:1;margin-top:10px}
-  .row .tag{display:block;margin-top:12px;font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--or)}
-  @media(max-width:860px){.row{grid-template-columns:1fr;gap:12px}.row .arr{display:none}}
-
-  /* studio */
-  .studio{background:var(--bk);color:#fff}
-  .studio .grid{display:grid;grid-template-columns:1.5fr 1fr;gap:20px;margin-top:56px}
-  .studio .ph{border-radius:6px;overflow:hidden;height:520px}
-  .studio .ph img{width:100%;height:100%;object-fit:cover}
-  .studio .col{display:grid;grid-template-rows:1fr 1fr;gap:20px}
-  .studio .col .ph{height:250px}
-  .gear{margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid #2A2A30}
-  .gear div{padding:26px 22px 26px 0;border-bottom:1px solid #2A2A30}
-  .gear b{display:block;font-size:22px;font-weight:900;letter-spacing:-.02em}
-  .gear span{display:block;margin-top:6px;color:#9A9AA3;font-size:14px}
-  @media(max-width:900px){.studio .grid{grid-template-columns:1fr}.studio .ph{height:320px}.studio .col{grid-template-rows:none;grid-template-columns:1fr 1fr}.studio .col .ph{height:200px}.gear{grid-template-columns:1fr 1fr}}
-
-  /* spaces */
-  .spaces{background:var(--wh)}
-  .tiles{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:56px}
-  .tile{border:1.5px solid var(--line);border-radius:6px;padding:34px 30px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;transition:.2s}
-  .tile:hover{border-color:var(--or);transform:translateY(-3px)}
-  .tile h3{font-size:26px;font-weight:900;letter-spacing:-.02em}
-  .tile p{color:var(--mute);margin-top:12px;line-height:1.6;font-size:15px}
-  .tile .go{font-weight:800;color:var(--or);font-size:14px;margin-top:24px}
-  @media(max-width:900px){.tiles{grid-template-columns:1fr}}
-
-  /* team */
-  .team{background:var(--pa)}
-  .people{display:grid;grid-template-columns:repeat(3,1fr);gap:20px 40px;margin-top:48px}
-  .people div{padding:22px 0;border-top:1.5px solid var(--ink)}
-  .people b{font-size:20px;font-weight:900}
-  .people span{display:block;color:var(--mute);font-size:14px;margin-top:6px;line-height:1.55}
-  .people q{display:block;margin-top:8px;color:var(--ink);font-size:14px;line-height:1.65;quotes:none;border-left:2px solid var(--or);padding-left:10px}
-  @media(max-width:900px){.people{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){.people{grid-template-columns:1fr}}
-
-  /* cta */
-  .cta{background:var(--or);color:var(--bk);padding:110px 0}
-  .cta h2{max-width:24ch}
-  .cta .row2{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;flex-wrap:wrap;margin-top:40px}
-  .cta .tel{font-size:clamp(28px,4vw,44px);font-weight:900;letter-spacing:-.02em}
-  .cta .tel small{display:block;font-size:14px;font-weight:600;opacity:.75;margin-top:6px}
-
-  /* footer */
-  footer{background:var(--bk);color:#9A9AA3;padding:64px 0 36px;font-size:13px}
-  footer .cols{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr 1.2fr;gap:32px;padding-bottom:40px;border-bottom:1px solid #2A2A30}
-  footer .brand{color:#fff;font-weight:900;letter-spacing:.14em;font-size:16px}
-  footer .brand small{display:block;color:#9A9AA3;font-weight:500;letter-spacing:0;margin-top:14px;line-height:1.7;font-size:13px}
-  footer h4{color:#fff;font-size:12px;font-weight:800;letter-spacing:.1em;margin-bottom:14px}
-  footer .cols a,footer .cols span{display:block;line-height:1.6;margin-bottom:8px;color:#9A9AA3}
-  footer .cols a:hover{color:#fff}
-  footer .bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:22px;font-size:12px;color:#6E6E76}
-  @media(max-width:900px){footer .cols{grid-template-columns:1fr 1fr}}
-</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css?v=20261110">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"LocalBusiness","name":"테넷 엔터테인먼트","alternateName":"TENET Entertainment","description":"음악 제작 프로덕션. 작곡, 보컬, 세션, 녹음, 믹싱, 악보, 영상, 공연 기획.","telephone":"+82-10-3081-3730","address":{"@type":"PostalAddress","streetAddress":"돌곶이로9길 14","addressLocality":"성북구","addressRegion":"서울특별시","addressCountry":"KR"},"url":"https://www.tenet-ent.co.kr/","sameAs":["https://www.instagram.com/tenet_ent/"],"openingHours":"Mo-Su 00:00-24:00"}
 </script>
+<script src="assets/site.js?v=20261110" defer></script>
 </head>
 <body>
-<a class="skip" href="#works">본문으로 건너뛰기</a>
-<div class="intro" id="intro"><div class="m"><i></i><span><b>TENET</b></span></div></div>
-<div class="prog" id="prog"></div>
-<div class="cur" id="cur"><span class="lbl" id="curl"></span></div>
-<div class="lb" id="lb"><div class="box"><div class="t" id="lbt"></div><button class="x" id="lbx" type="button">닫기 ESC</button><iframe id="lbf" allow="autoplay; encrypted-media" allowfullscreen></iframe><img id="lbi" alt="" style="display:none"><div id="lbc" class="case" style="display:none"></div></div></div>
-<div class="sticky"><a href="tel:01030813730">전화</a><a class="or" href="#contact">제작 문의</a></div>
-<button class="totop" id="totop" type="button" aria-label="맨 위로">↑</button>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
 
-<nav class="nav">
-  <a class="mark" href="#"><i></i>TENET</a>
-  <ul>
-    <li><a href="#works">만든 것</a></li>
-    <li><a href="#services">제작 서비스</a></li>
-    <li><a href="#process">진행</a></li>
-    <li><a href="#studio">녹음실</a></li>
-    <li><a href="#spaces">합주실·밴드클럽</a></li>
-    <li><a href="#team">팀</a></li>
-  </ul>
-  <div style="display:flex;align-items:center">
-  <button class="snd" id="snd" type="button" aria-pressed="false"><i><b></b><b></b><b></b></i>SOUND OFF</button>
-  <a class="cta" href="#contact">제작 문의</a>
-  <button class="burger" id="burger" aria-label="메뉴" type="button"><i></i><i></i><i></i></button>
-  </div>
-</nav>
-<div class="mnav" id="mnav">
-  <a href="#works">만든 것</a><a href="#infra">방식</a><a href="#services">제작 서비스</a><a href="#process">진행 · FAQ</a><a href="#visit">오시는 길</a><a href="#studio">녹음실</a><a href="#spaces">합주실·밴드클럽</a><a href="#team">팀</a>
-  <a class="or" href="#contact">제작 문의 →</a>
-  <small>010-3081-3730 · 서울 성북구 돌곶이로9길 14</small>
-</div>
-
-<header class="hero">
-  <canvas id="orb" aria-hidden="true"></canvas>
-  <img class="fallback" data-src="assets/img-01.jpg" alt="테넷 메인 콘솔룸">
-  <div class="wm" aria-hidden="true">TENET</div>
-  <div class="live" aria-hidden="true"><i></i><span id="seoul">서울 --:--</span><span>·</span><span>상주 프로젝트 진행 중</span></div>
-  <div class="rec" aria-hidden="true"><i></i>REC <span id="rectime">00:00:00</span></div>
+<header class="top" id="topbar">
   <div class="wrap">
-    <div class="eyebrow"><i></i>서울 성북구 · 음악 제작 프로덕션</div>
-    <h1><span class="ln"><span>일반 녹음실이 아닙니다.</span></span><span class="ln"><span><span class="flip"><span class="flip-in">제작 프로덕션</span></span>입니다.</span></span></h1>
-    <p>작곡가 10인, 세션 연주자, 보컬, 엔지니어, 영상, 공연 기획팀이 한 건물에 있습니다. 외주 없이 섭외부터 발매까지 한 곳에서 끝나기 때문에 빠르고, 그만큼 합리적입니다.</p>
-    <dl class="meta">
-      <dt>설립</dt><dd>2024년 10월, 서울 성북구 돌곶이로9길 14</dd>
-      <dt>지금</dt><dd>AI 음악 소프트웨어 개발사 5개월 상주 진행 중 (2026.9~)</dd>
-      <dt>공연</dt><dd>연극 〈가로묘지 주식회사〉 주최·주관 <b id="dday" data-date="" style="color:var(--or2)"></b></dd>
-    </dl>
-    <div class="btns">
-      <a class="btn or" href="#contact">제작 문의하기</a>
-      <a class="btn gh" href="#works" data-yt="dU2Db1unbSM" data-t="라프텔 「오타쿠 연애 심판전」 오프닝">결과물 듣기</a>
-      <a class="btn gh" href="tenet-intro.pdf" download>소개서 PDF</a>
-      <button class="btn mic" id="micbtn" type="button"><i></i>소리 내보기</button>
-    </div>
+    <a class="mk" href="#hero" aria-label="테넷 엔터테인먼트 첫 화면">TENET</a>
+    <nav aria-label="주요 메뉴">
+      <a href="#works">만든 것</a>
+      <a href="#services">맡기는 일</a>
+      <a href="#process">진행</a>
+      <a href="#studio">공간</a>
+      <a href="#team">팀</a>
+      <a href="#visit">오시는 길</a>
+    </nav>
+    <a class="pill" href="#contact">제작 문의</a>
+    <button class="mbtn" id="mbtn" type="button" aria-expanded="false" aria-controls="mnav">메뉴</button>
   </div>
-  <div class="hint" aria-hidden="true"><i></i>SCROLL</div>
+  <div class="mnav" id="mnav" role="navigation" aria-label="모바일 메뉴" hidden>
+    <a href="#works">만든 것</a>
+    <a href="#services">맡기는 일</a>
+    <a href="#process">진행</a>
+    <a href="#studio">공간</a>
+    <a href="#team">팀</a>
+    <a href="#visit">오시는 길</a>
+  </div>
 </header>
 
-<div class="marq" aria-hidden="true">
-  <div class="track">
-    <span>라프텔 「오타쿠 연애 심판전」 오프닝</span><span>2026 지방선거 선거송 제작</span><span>KBS 아는노래 편집·제작</span><span>「과학×모험 살아남기 대작전!」 오프닝 한국어 번안</span><span>AI 음악 소프트웨어 개발사 5개월 상주</span><span>넥센타이어 레이싱 페스티벌 공연</span><span>팔레트 온 스테이지</span><span>위러브 총보 제작</span>
-    <span>라프텔 「오타쿠 연애 심판전」 오프닝</span><span>2026 지방선거 선거송 제작</span><span>KBS 아는노래 편집·제작</span><span>「과학×모험 살아남기 대작전!」 오프닝 한국어 번안</span><span>AI 음악 소프트웨어 개발사 5개월 상주</span><span>넥센타이어 레이싱 페스티벌 공연</span><span>팔레트 온 스테이지</span><span>위러브 총보 제작</span>
+<main id="main">
+
+<div class="hero" id="hero">
+  <img class="ph" src="assets/img-04.webp" width="2000" height="1500" alt="테넷 2층 녹음실 메인 콘솔룸. 소나무 벽과 남색 흡음 패널, 콘솔 데스크." fetchpriority="high">
+  <img class="ph warm" src="assets/img-06.webp" width="2000" height="1500" alt="" aria-hidden="true" fetchpriority="low" decoding="async">
+  <button class="lamp" id="lamp" type="button" aria-pressed="false"><span>작업 조명</span><i aria-hidden="true"></i></button>
+  <div class="wrap">
+    <h1>일반 녹음실이 아닙니다.<br>제작 프로덕션입니다.</h1>
+    <p>작곡가 10인, 세션 연주자, 보컬, 엔지니어, 영상, 공연 기획팀이 한 건물에 있습니다. 외주 없이 섭외부터 발매까지 한 곳에서 끝나기 때문에 빠르고, 그만큼 합리적입니다.</p>
+    <div class="btns">
+      <a class="btn pri" href="#contact">제작 문의하기</a>
+      <a class="btn line" href="https://www.youtube.com/watch?v=dU2Db1unbSM" data-yt="dU2Db1unbSM" data-t="라프텔 「오타쿠 연애 심판전」 오프닝">결과물 듣기</a>
+      <a class="txt" href="tenet-intro.pdf" download>소개서 PDF 받기</a>
+    </div>
+  </div>
+</div>
+<div class="chev" aria-hidden="true"></div>
+
+<div class="facts">
+  <div class="wrap">
+    <dl>
+      <div><dt>설립</dt><dd>2024년 10월, 서울 성북구 돌곶이로9길 14</dd></div>
+      <div><dt>지금</dt><dd>AI 음악 소프트웨어 개발사 5개월 상주 진행 중 (2026.9~)</dd></div>
+      <div><dt>공연</dt><dd>연극 〈가로묘지 주식회사〉 주최·주관<b id="dday" data-date=""></b></dd></div>
+    </dl>
   </div>
 </div>
 
 <section class="works" id="works">
   <div class="wrap">
-    <div class="head rv">
-      <div>
-        <div class="kicker"><span class="num">01</span>만든 것</div>
-        <h2>결과물로 말합니다.</h2>
-      </div>
-      <p class="lead">애니메이션 오프닝, 선거송, 방송 편집, 앨범. 2024년 11월부터 매달 제작 건이 돌아갑니다. 유튜브에 올라간 것부터 들어보세요.</p>
-    </div>
-    <div class="filt rv" id="filt"><button class="on" data-f="all">전체</button><button data-f="ost">애니 · OST</button><button data-f="camp">캠페인 · 방송</button><button data-f="score">악보</button><button data-f="ai">AI · 데이터</button></div>
-  </div>
-  <div class="hwrap" id="hwrap"><div class="hsticky">
-    <div class="wgrid htrack" id="htrack">
-      <a class="w big rv" data-cat="ost" href="https://www.youtube.com/watch?v=dU2Db1unbSM" data-yt="dU2Db1unbSM" data-t="라프텔 「오타쿠 연애 심판전」 오프닝">
-        <img src="assets/img-02.jpg" alt="" loading="lazy" decoding="async">
-        <div class="play"></div>
-        <div class="t">
-          <div class="cat">라프텔 계약 프로젝트</div>
+    <h2>여기서 만든 것들</h2>
+    <p class="lede">애니메이션 오프닝, 선거송, 방송 편집, 앨범. 2024년 11월부터 매달 제작 건이 돌아갑니다. 유튜브에 올라간 것부터 들어보세요.</p>
+    <ol>
+      <li>
+        <span class="k">라프텔 계약 프로젝트</span>
+        <div>
           <h3>애니메이션 「오타쿠 연애 심판전」 오프닝</h3>
           <p>라프텔과 계약 후 보컬 섭외, 녹음, 믹싱, 마스터링까지 전 과정 제작. 라프텔 공식 채널 공개.</p>
         </div>
-      </a>
-      <a class="w mid rv d1" data-cat="ost" href="https://www.youtube.com/watch?v=EEUFmqkHTEk" data-yt="EEUFmqkHTEk" data-t="「과학×모험 살아남기 대작전!」 오프닝 주제가">
-        <img src="assets/img-03.jpg" alt="" loading="lazy" decoding="async">
-        <div class="play"></div>
-        <div class="t">
-          <div class="cat">한국어 번안 제작</div>
+        <a class="play" href="https://www.youtube.com/watch?v=dU2Db1unbSM" data-yt="dU2Db1unbSM" data-t="라프텔 「오타쿠 연애 심판전」 오프닝" aria-label="영상 보기, 라프텔 「오타쿠 연애 심판전」 오프닝"><span><img src="assets/img-02.jpg" width="720" height="960" alt="" loading="lazy"></span>영상 보기</a>
+      </li>
+      <li>
+        <span class="k">한국어 번안 제작</span>
+        <div>
           <h3>「과학×모험 살아남기 대작전!」 오프닝 주제가</h3>
           <p>원곡의 한국어 번안 버전. 보컬 섭외, 녹음, 믹싱, 마스터링. 공식 채널 공개.</p>
         </div>
-      </a>
-      <div class="w sm solid rv" data-cat="camp" data-case="선거송" tabindex="0">
-        <div class="t">
-          <div class="cat">캠페인 음원</div>
+        <a class="play" href="https://www.youtube.com/watch?v=EEUFmqkHTEk" data-yt="EEUFmqkHTEk" data-t="「과학×모험 살아남기 대작전!」 오프닝 주제가" aria-label="영상 보기, 「과학×모험 살아남기 대작전!」 오프닝 주제가"><span><img src="assets/img-03.jpg" width="540" height="540" alt="" loading="lazy"></span>영상 보기</a>
+      </li>
+      <li>
+        <span class="k">캠페인 음원</span>
+        <div>
           <h3>2026 지방선거 선거송</h3>
           <p>작·편곡부터 보컬, 믹싱, 납품까지. 캠페인 일정에 맞춘 단기 제작.</p>
+          <details class="case">
+            <summary>제작 범위 보기</summary>
+            <dl>
+              <div><dt>시기</dt><dd>2026.05</dd></div>
+              <div><dt>의뢰</dt><dd>캠페인 측 다이렉트 의뢰 (비공개)</dd></div>
+              <div><dt>범위</dt><dd>작·편곡, 보컬 섭외, 녹음, 믹싱·마스터링, 납품</dd></div>
+              <div><dt>조건</dt><dd>선거 일정에 맞춘 단기 제작, 규격별 버전 납품</dd></div>
+              <div><dt>비고</dt><dd>후보·정당명은 계약상 비공개</dd></div>
+            </dl>
+          </details>
         </div>
-      </div>
-      <div class="w sm pale rv d1" data-cat="camp" data-case="KBS" tabindex="0">
-        <div class="t">
-          <div class="cat">방송</div>
+      </li>
+      <li>
+        <span class="k">방송</span>
+        <div>
           <h3>KBS 아는노래 편집·제작</h3>
           <p>녹화분 편집, 피아노 제작, 믹싱, 송폼 편곡.</p>
+          <details class="case">
+            <summary>제작 범위 보기</summary>
+            <dl>
+              <div><dt>시기</dt><dd>2025.05</dd></div>
+              <div><dt>범위</dt><dd>녹화분 편집, 피아노 제작, 믹싱, 송폼 편곡</dd></div>
+              <div><dt>형식</dt><dd>방송 규격 납품, 회차별 작업</dd></div>
+              <div><dt>비고</dt><dd>출연 아티스트 관련 상세는 비공개</dd></div>
+            </dl>
+          </details>
         </div>
-      </div>
-      <a class="w sm rv d2" data-cat="score" href="https://shop.welove.team/" target="_blank" rel="noopener">
-        <div class="t">
-          <div class="cat">악보 · 총보</div>
+      </li>
+      <li>
+        <span class="k">악보 · 총보</span>
+        <div>
           <h3>위러브(WELOVE) 총보 제작</h3>
           <p>위러브 샵에 판매되는 밴드 총보와 파트보를 제작합니다. 채보부터 편집, 납품까지.</p>
         </div>
-      </a>
-      <div class="w sm rv d3" data-cat="ai" data-case="AI" tabindex="0">
-        <img src="assets/img-04.webp" alt="" loading="lazy" decoding="async">
-        <div class="t">
-          <div class="cat">AI · 데이터</div>
+        <a class="out" href="https://shop.welove.team/" target="_blank" rel="noopener">위러브 샵 열기</a>
+      </li>
+      <li>
+        <span class="k">AI · 데이터</span>
+        <div>
           <h3>AI 음악 소프트웨어 개발사 상주</h3>
-          <p>레퍼런스 모니터링과 녹음 테스트를 위한 5개월 월 단위 계약. 2026년 9월 진행 중.</p>
+          <p>레퍼런스 모니터링과 녹음 테스트를 위한 5개월 월 단위 계약. 2026년 9월부터 진행 중.</p>
+          <details class="case">
+            <summary>계약 조건 보기</summary>
+            <dl>
+              <div><dt>시기</dt><dd>2026.09~</dd></div>
+              <div><dt>의뢰</dt><dd>AI 잡음 제거 VST와 스템 기반 DAW를 개발하는 스타트업</dd></div>
+              <div><dt>범위</dt><dd>레퍼런스 모니터링 환경, 녹음 테스트, 월 단위 대관</dd></div>
+              <div><dt>조건</dt><dd>우선 예약권, 세팅 유지, 정부 지원사업 정산 서류 대응</dd></div>
+              <div><dt>비고</dt><dd>상호는 계약상 비공개</dd></div>
+            </dl>
+          </details>
         </div>
-      </div>
-    </div>
-    <div class="hprog"><i id="hprog"></i></div>
-  </div></div>
-  <div class="wrap"><p class="fn">앨범 세션 참여 20여 장, 유튜브·트로트·CCM·교육 음원 다수는 비공개 건이라 적지 않았습니다.</p></div>
-</section>
-
-<section class="infra" id="infra">
-  <div class="wrap">
-    <div class="kicker rv"><span class="num">02</span>왜 가성비가 나오나</div>
-    <h2 class="rv">필요한 걸 체크해보세요.<br>누가 하는지 바로 보입니다.</h2>
-    <p class="lead rv" style="color:#B8B8C0">체크한 항목마다 담당하는 사람과 공간이 뜹니다. 전부 테넷 소속이거나 상주 인력입니다. 외부 업체를 끼우지 않기 때문에 견적도, 일정도, 담당자도 하나입니다.</p>
-    <div class="bgrid rv d1">
-      <div class="chips" id="chips">
-        <button data-n="compose" data-who="민요한 (Chief Composer) 외 소속 작곡가 10인|메인 콘솔룸"><span class="bx"></span>작곡 · 편곡</button>
-        <button data-n="vocal" data-who="소속 보컬 풀 — 남녀·연령대별|보컬 부스"><span class="bx"></span>보컬 섭외</button>
-        <button data-n="session" data-who="세션 연주자 — 기타·베이스·드럼·건반·현|메인 콘솔룸 · H홀"><span class="bx"></span>세션 연주</button>
-        <button data-n="rec" data-who="오찬우 (Chief Audio Engineer)|메인 콘솔룸 · 보컬 부스"><span class="bx"></span>녹음</button>
-        <button data-n="mix" data-who="오찬우 (Chief Audio Engineer)|메인 콘솔룸, SSL Big Six"><span class="bx"></span>믹싱 · 마스터링</button>
-        <button data-n="score" data-who="채보팀 — 밴드 스코어·피아노·스트링|세컨룸"><span class="bx"></span>악보 · 총보</button>
-        <button data-n="video" data-who="촬영감독 · 영상팀|H홀 · 공연장"><span class="bx"></span>영상 촬영</button>
-        <button data-n="dist" data-who="테넷 유통 대행 — 멜론·지니·스포티파이·애플뮤직|—"><span class="bx"></span>유통 · 발매</button>
-        <button data-n="live" data-who="임혜림 (연출) · 민요한 (밴드마스터) · 홍보팀|팔레트 온 스테이지"><span class="bx"></span>공연 · 쇼케이스</button>
-        <button data-n="room" data-who="H홀 합주실 (트리플 방음) · MIMM 연습실 8룸|지하 H홀 · 돌곶이로22길 MIMM"><span class="bx"></span>리허설 공간</button>
-        <button data-n="data" data-who="성우·보컬 풀 + 트리플 방음 부스|보컬 부스 · 메인 콘솔룸"><span class="bx"></span>AI 음성 데이터</button>
-        <button data-n="edu" data-who="MIMM 연습실 8룸 · 밴드클럽 · 실용음악과 출신 강사 네트워크|돌곶이로22길 MIMM (도보 5분)"><span class="bx"></span>교육 · 클래스</button>
-      </div>
-      <div class="bpanel">
-        <div class="big"><span id="cnt">6</span>개 항목, 외부 업체 <b>0</b>곳.</div>
-        <ul class="assign" id="assign"></ul>
-        <p class="hand">여기 적힌 건 각 파트의 책임자와 공간입니다. 파트마다 소속·상주 인력이 더 있고, 프로젝트 규모에 맞춰 팀을 구성합니다.</p>
-        <a class="btn or" href="#contact">이 구성으로 문의</a>
-      </div>
-    </div>
+      </li>
+    </ol>
+    <p class="fn">앨범 세션 참여 20여 장, 유튜브·트로트·CCM·교육 음원 다수는 비공개 건이라 적지 않았습니다.</p>
   </div>
 </section>
 
-
-
 <section class="svc" id="services">
   <div class="wrap">
-    <div class="kicker rv"><span class="num">03</span>제작 서비스</div>
     <h2>기업이 맡기는 다섯 가지 일</h2>
-    <p class="lead">견적은 프로젝트별로 산정합니다. 첫 프로젝트 결과물이 기준에 미치지 못하면 비용을 청구하지 않습니다.</p>
-    <div class="rows">
-      <a class="row rv" href="#contact">
-        <h3>보컬·브랜드 음원 제작</h3>
-        <p>작·편곡, 보컬 섭외, 세션 실연, 믹싱과 마스터링을 한 팀이 처리합니다. 애니메이션 오프닝 한국어 번안과 선거송을 실제로 만들어 발매했습니다.<span class="tag">애니 OP · 선거송 · CM송 · 앨범</span><span class="more">대표 실적 — 라프텔 오프닝 · 과학×모험 OP 번안 · 2026 지방선거 선거송 · 트로트 음원</span></p>
-        <div class="arr">→</div>
-      </a>
-      <a class="row rv d1" href="#contact">
-        <h3>교육 콘텐츠 나레이션 · 교재 음원</h3>
-        <p>채보, MR 제작, 나레이션 녹음, 노이즈 정리, 편집, 납품을 한 번에. 남녀·연령대별 성우 풀을 두고 48시간 안에 납품합니다. 듣기 음원과 반주 음원을 한 곳에서 처리합니다.<span class="tag">이러닝 · 교과서 · 어학</span><span class="more">대표 실적 — 유튜브 교육 채널 음원 · CCM 보컬 녹음 · 불경 낭독 녹음</span></p>
-        <div class="arr">→</div>
-      </a>
-      <a class="row rv d2" href="#contact">
-        <h3>AI 음성 데이터 녹음</h3>
-        <p>화자 섭외, 동일 조건 반복 녹음, QC, 파일 정리와 네이밍. AI 스템 분리와 AI 음원 제작을 이미 상품으로 다루고 있어 데이터 스펙을 이해합니다. 월 단위 상주 계약이 가능합니다.<span class="tag">TTS · 감성 발화 · 데이터셋</span><span class="more">대표 실적 — AI 음악 소프트웨어 개발사 5개월 상주 · AI 스템 분리 · AI 음원 제작</span></p>
-        <div class="arr">→</div>
-      </a>
-      <a class="row rv d3" href="#contact">
-        <h3>악보 · 총보 제작</h3>
-        <p>밴드 풀스코어, 피아노, 스트링, 입시 악보까지. 청음 채보와 편집을 분업 체계로 처리해 대량 발주도 일정 안에 납품합니다.<span class="tag">위러브 총보 · 교재 · 입시</span><span class="more">대표 실적 — 위러브 샵 밴드 총보 · 입시 채보 다수 · 바이올린 단선 악보</span></p>
-        <div class="arr">→</div>
-      </a>
-      <a class="row rv d4" href="#contact">
-        <h3>음원 발매 · 유통 · 공연 연계</h3>
-        <p>멜론, 지니, 스포티파이, 애플뮤직 유통 대행. 앨범을 만들면 자체 기획 공연 무대와 영상 촬영까지 연결합니다. 제작사와 공연 기획사가 같은 회사라서 가능합니다.<span class="tag">유통 · 쇼케이스 · 팔레트 온 스테이지</span><span class="more">대표 실적 — 팔레트 온 스테이지 2회 · 넥센타이어 레이싱 페스티벌 · 연극 아빠들의 소꿉놀이</span></p>
-        <div class="arr">→</div>
-      </a>
+    <p class="lede">견적은 프로젝트별로 산정합니다.</p>
+    <dl>
+      <div class="r">
+        <dt>보컬·브랜드 음원 제작<small>애니 OP, 선거송, CM송, 앨범</small></dt>
+        <dd>작·편곡, 보컬 섭외, 세션 실연, 믹싱과 마스터링을 한 팀이 처리합니다. 애니메이션 오프닝 한국어 번안과 선거송을 실제로 만들어 발매했습니다.<small><b>실적</b>라프텔 오프닝, 과학×모험 OP 번안, 2026 지방선거 선거송, 트로트 음원</small></dd>
+      </div>
+      <div class="r">
+        <dt>교육 콘텐츠 나레이션 · 교재 음원<small>이러닝, 교과서, 어학</small></dt>
+        <dd>채보, MR 제작, 나레이션 녹음, 노이즈 정리, 편집, 납품을 한 번에. 남녀·연령대별 성우 풀을 두고 48시간 안에 납품합니다. 듣기 음원과 반주 음원을 한 곳에서 처리합니다.<small><b>실적</b>유튜브 교육 채널 음원, CCM 보컬 녹음, 불경 낭독 녹음</small></dd>
+      </div>
+      <div class="r">
+        <dt>AI 음성 데이터 녹음<small>TTS, 감성 발화, 데이터셋</small></dt>
+        <dd>화자 섭외, 동일 조건 반복 녹음, QC, 파일 정리와 네이밍. AI 스템 분리와 AI 음원 제작을 이미 상품으로 다루고 있어 데이터 스펙을 이해합니다. 월 단위 상주 계약이 가능합니다.<small><b>실적</b>AI 음악 소프트웨어 개발사 5개월 상주, AI 스템 분리, AI 음원 제작</small></dd>
+      </div>
+      <div class="r">
+        <dt>악보 · 총보 제작<small>위러브 총보, 교재, 입시</small></dt>
+        <dd>밴드 풀스코어, 피아노, 스트링, 입시 악보까지. 청음 채보와 편집을 분업 체계로 처리해 대량 발주도 일정 안에 납품합니다.<small><b>실적</b>위러브 샵 밴드 총보, 입시 채보 다수, 바이올린 단선 악보</small></dd>
+      </div>
+      <div class="r">
+        <dt>음원 발매 · 유통 · 공연 연계<small>유통, 쇼케이스, 자체 기획 공연</small></dt>
+        <dd>멜론, 지니, 스포티파이, 애플뮤직 유통 대행. 앨범을 만들면 자체 기획 공연 무대와 영상 촬영까지 연결합니다. 제작사와 공연 기획사가 같은 회사라서 가능합니다.<small><b>실적</b>팔레트 온 스테이지, 넥센타이어 레이싱 페스티벌, 연극 아빠들의 소꿉놀이</small></dd>
+      </div>
+    </dl>
+    <p class="gt">첫 프로젝트 결과물이 기준에 미치지 못하면 비용을 청구하지 않습니다.</p>
+  </div>
+</section>
+
+<section class="ask" id="contact">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <h2>필요한 걸 체크해보세요. 누가 하는지 바로 보입니다.</h2>
+        <p class="lede">체크한 항목마다 담당하는 사람과 공간이 뜹니다. 전부 테넷 소속이거나 상주 인력입니다. 외부 업체를 끼우지 않기 때문에 견적도, 일정도, 담당자도 하나입니다.</p>
+        <dl class="terms">
+          <div><dt>납기</dt><dd>나레이션 녹음·편집 48시간, 곡 단위 음원 2~3주</dd></div>
+          <div><dt>견적</dt><dd>항목별 산정. 견적 확정 전에는 비용이 발생하지 않습니다.</dd></div>
+          <div><dt>보증</dt><dd>첫 프로젝트 결과물이 기준에 미치지 못하면 비용을 청구하지 않습니다.</dd></div>
+          <div><dt>권리</dt><dd>결과물의 권리는 전부 의뢰사에 귀속. 계약서에 명시합니다.</dd></div>
+        </dl>
+        <a class="tel" href="tel:01030813730">010-3081-3730</a>
+        <p class="alt">전화가 가장 빠릅니다. <a href="https://www.instagram.com/tenet_ent/" target="_blank" rel="noopener">인스타그램 DM</a>도 받습니다.</p>
+      </div>
+
+      <form class="sheet" data-inq novalidate>
+        <header><b>제작 의뢰서</b><span>1분이면 끝납니다</span></header>
+        <div class="step">
+          <h3><i>1</i>필요한 작업을 고르세요</h3>
+          <div class="chips" id="chips" role="group" aria-label="필요한 작업"></div>
+          <noscript><p class="hand">자바스크립트가 꺼져 있습니다. 010-3081-3730으로 전화나 문자를 주세요.</p></noscript>
+        </div>
+        <div class="step">
+          <h3><i>2</i>담당자와 공간</h3>
+          <div id="assign" aria-live="polite"></div>
+          <p class="hand">여기 적힌 건 각 파트의 책임자와 공간입니다. 파트마다 소속·상주 인력이 더 있고, 프로젝트 규모에 맞춰 팀을 구성합니다.</p>
+        </div>
+        <div class="step">
+          <h3><i>3</i>연락받을 곳</h3>
+          <div class="fields">
+            <label>회사 · 소속 *<input name="org" autocomplete="organization" placeholder="예) 라프텔" required></label>
+            <label>담당자 · 연락처 *<input name="who" placeholder="이름, 전화 또는 이메일" required></label>
+            <input type="hidden" name="need" id="need">
+            <label class="full">일정 · 참고 링크<textarea name="msg" placeholder="예) 12월 둘째 주까지, 30초 CM송 1곡"></textarea></label>
+          </div>
+          <div class="btns">
+            <button class="btn navy" type="button" data-sms>문자로 보내기</button>
+            <button class="btn ink" type="button" data-copy>내용 복사</button>
+          </div>
+          <p data-ok role="status"></p>
+          <p class="note">문자는 010-3081-3730으로 발송됩니다. 데스크톱에서는 내용을 복사해 카카오톡이나 이메일로 보내주세요.</p>
+        </div>
+      </form>
     </div>
   </div>
 </section>
 
 <section class="proc" id="process">
   <div class="wrap">
-    <div class="kicker rv"><span class="num">04</span>진행 순서</div>
-    <h2 class="rv">문의부터 납품까지 다섯 단계.</h2>
-    <p class="lead rv">첫 통화에서 범위와 일정을 잡고, 테스트 녹음으로 톤을 맞춘 뒤 견적을 드립니다. 견적 확정 전에는 비용이 발생하지 않습니다.</p>
-    <div class="steps rv d1">
-      <div class="step"><div class="d">DAY 0</div><h3>문의</h3><p>전화, 문자, 아래 폼. 필요한 항목과 일정만 알려주시면 됩니다.</p></div>
-      <div class="step"><div class="d">DAY 1~3</div><h3>테스트 녹음</h3><p>진행 중인 콘텐츠 한 편으로 무료 테스트. 스튜디오 방문 환영.</p></div>
-      <div class="step"><div class="d">DAY 3~5</div><h3>견적 · 계약</h3><p>항목별 견적서, 제작 용역 계약서, 필요 시 NDA. 전자세금계산서 발행.</p></div>
-      <div class="step"><div class="d">제작</div><h3>작업</h3><p>담당 프로듀서 한 명이 처음부터 끝까지. 중간 공유는 카톡 또는 메일.</p></div>
-      <div class="step"><div class="d">납품</div><h3>납품 · 수정</h3><p>규격에 맞춘 파일 납품. 수정 횟수는 계약서에 명시.</p></div>
-    </div>
+    <h2>문의부터 납품까지 다섯 단계</h2>
+    <p class="lede">첫 통화에서 범위와 일정을 잡고, 테스트 녹음으로 톤을 맞춘 뒤 견적을 드립니다. 견적 확정 전에는 비용이 발생하지 않습니다.</p>
+    <ol>
+      <li><p class="d">첫날</p><h3>문의</h3><p>전화, 문자, 위 의뢰서. 필요한 항목과 일정만 알려주시면 됩니다.</p></li>
+      <li><p class="d">1~3일째</p><h3>테스트 녹음</h3><p>진행 중인 콘텐츠 한 편으로 무료 테스트. 스튜디오 방문 환영.</p></li>
+      <li><p class="d">3~5일째</p><h3>견적 · 계약</h3><p>항목별 견적서, 제작 용역 계약서, 필요 시 NDA. 전자세금계산서 발행.</p></li>
+      <li><p class="d">제작 기간</p><h3>작업</h3><p>담당 프로듀서 한 명이 처음부터 끝까지. 중간 공유는 카톡 또는 메일.</p></li>
+      <li><p class="d">마감일</p><h3>납품 · 수정</h3><p>규격에 맞춘 파일 납품. 수정 횟수는 계약서에 명시.</p></li>
+    </ol>
   </div>
 </section>
 
 <section class="faq" id="faq">
   <div class="wrap">
-    <div class="kicker rv"><span class="num">05</span>자주 묻는 것</div>
-    <h2 class="rv">계약 전에 확인하시는 것들.</h2>
-    <div class="qa rv d1">
-      <details><summary>견적은 어떻게 산정되나요?</summary><div class="a">항목별로 산정합니다. 작곡·편곡, 보컬, 세션, 녹음, 믹싱·마스터링, 악보, 영상, 유통을 각각 적고 합산합니다. 외부 업체를 끼우지 않아서 중간 마진이 없고, 견적서에 적힌 항목 외 추가 비용은 사전 협의 없이 발생하지 않습니다.</div></details>
-      <details><summary>저작권과 결과물의 권리는 누구에게 있나요?</summary><div class="a">의뢰하신 결과물의 권리는 전부 의뢰사에 귀속됩니다. 계약서에 명시하며, 테넷은 포트폴리오 공개 여부만 별도로 동의를 받습니다. 공개를 원하지 않으시면 비공개로 처리합니다.</div></details>
-      <details><summary>세금계산서와 정부 지원사업 정산이 가능한가요?</summary><div class="a">전자세금계산서를 발행합니다. 지원사업 사업비목에 맞춰 견적서 항목을 구성한 경험이 있으니, 정산 서류 형식이 있으면 미리 알려주세요.</div></details>
-      <details><summary>납기는 보통 얼마나 걸리나요?</summary><div class="a">나레이션 녹음·편집은 48시간, 곡 단위 음원 제작은 2~3주, 앨범은 규모에 따라 협의합니다. 급한 일정은 첫 통화에서 말씀해주시면 가능 여부를 바로 답합니다.</div></details>
-      <details><summary>수정은 몇 번까지 되나요?</summary><div class="a">계약서에 횟수를 적습니다. 보통 믹싱 2회, 편곡 1회이고, 범위가 바뀌는 수정은 별도 견적입니다. 테스트 녹음 단계에서 방향을 맞추기 때문에 실제로 수정이 많이 생기지는 않습니다.</div></details>
-      <details><summary>스튜디오만 빌릴 수도 있나요?</summary><div class="a">가능합니다. 시간 단위, 월 단위 대관 모두 운영하며, 엔지니어 동반 여부를 선택할 수 있습니다. AI 개발사처럼 장기 상주가 필요한 경우 우선 예약권과 세팅 유지 조건으로 계약합니다.</div></details>
+    <div><h2>계약 전에 확인하시는 것들</h2></div>
+    <div class="list">
+      <details>
+        <summary>견적은 어떻게 산정되나요?</summary>
+        <p>항목별로 산정합니다. 작곡·편곡, 보컬, 세션, 녹음, 믹싱·마스터링, 악보, 영상, 유통을 각각 적고 합산합니다. 외부 업체를 끼우지 않아서 중간 마진이 없고, 견적서에 적힌 항목 외 추가 비용은 사전 협의 없이 발생하지 않습니다.</p>
+      </details>
+      <details>
+        <summary>저작권과 결과물의 권리는 누구에게 있나요?</summary>
+        <p>의뢰하신 결과물의 권리는 전부 의뢰사에 귀속됩니다. 계약서에 명시하며, 테넷은 포트폴리오 공개 여부만 별도로 동의를 받습니다. 공개를 원하지 않으시면 비공개로 처리합니다.</p>
+      </details>
+      <details>
+        <summary>세금계산서와 정부 지원사업 정산이 가능한가요?</summary>
+        <p>전자세금계산서를 발행합니다. 지원사업 사업비목에 맞춰 견적서 항목을 구성한 경험이 있으니, 정산 서류 형식이 있으면 미리 알려주세요.</p>
+      </details>
+      <details>
+        <summary>납기는 보통 얼마나 걸리나요?</summary>
+        <p>나레이션 녹음·편집은 48시간, 곡 단위 음원 제작은 2~3주, 앨범은 규모에 따라 협의합니다. 급한 일정은 첫 통화에서 말씀해주시면 가능 여부를 바로 답합니다.</p>
+      </details>
+      <details>
+        <summary>수정은 몇 번까지 되나요?</summary>
+        <p>계약서에 횟수를 적습니다. 보통 믹싱 2회, 편곡 1회이고, 범위가 바뀌는 수정은 별도 견적입니다. 테스트 녹음 단계에서 방향을 맞추기 때문에 실제로 수정이 많이 생기지는 않습니다.</p>
+      </details>
+      <details>
+        <summary>스튜디오만 빌릴 수도 있나요?</summary>
+        <p>가능합니다. 시간 단위, 월 단위 대관 모두 운영하며, 엔지니어 동반 여부를 선택할 수 있습니다. AI 개발사처럼 장기 상주가 필요한 경우 우선 예약권과 세팅 유지 조건으로 계약합니다.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<div class="cine" id="cine">
-  <img src="assets/img-04.webp" alt="" loading="lazy" decoding="async">
-  <div class="wrap cap">
-    <div class="q">좋은 장비보다 중요한 건 들을 줄 아는 감각입니다.</div>
-    <div class="src">오찬우 · CHIEF AUDIO ENGINEER</div>
-  </div>
-</div>
-
-<section class="press" id="press">
+<section class="bldg" id="studio">
   <div class="wrap">
-    <div class="kicker rv"><span class="num">—</span>언론</div>
-    <p class="q rv">탁월한 품질의 결과물을 제공하는 가성비 좋은 올인원 음악 서비스</p>
-    <div class="src rv d1"><b>더모스트타임즈</b><span>2024.12.09 · 신주호 대표 인터뷰</span><a href="https://www.k-news25.co.kr/news/324623" target="_blank" rel="noopener">기사 전문</a></div>
-  </div>
-</section>
-
-<section class="map" id="visit">
-  <div class="wrap">
-    <div class="kicker rv"><span class="num">06</span>오시는 길</div>
-    <h2 class="rv">석관동, 한예종 앞.</h2>
-    <div class="mapgrid rv d1">
-      <iframe src="https://www.google.com/maps?q=서울특별시+성북구+돌곶이로9길+14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="테넷 녹음실 위치"></iframe>
-      <div class="addr">
-        <div><b>녹음실 · 합주실</b>서울 성북구 돌곶이로9길 14<span><br>2층 녹음실(G룸), 지하 합주실(H홀)</span></div>
-        <div><b>연습실 MIMM</b>서울 성북구 돌곶이로22길 50, 2F<span><br>녹음실에서 도보 5분</span></div>
-        <div><b>주차</b>석관동 공영주차장 바로 옆<span><br>장비 반입 시 건물 앞 하차 가능</span></div>
-        <div><b>대중교통</b>6호선 돌곶이역, 1호선 석계역<span><br>석관동 새마을금고 정류장 하차</span></div>
-        <div><b>방문 상담</b>평일·주말 예약제<span><br>010-3081-3730으로 시간을 잡아주세요</span></div>
+    <h2>돌곶이로9길 14, 건물 하나</h2>
+    <p class="lede">녹음실은 2층 G룸, 합주실은 지하 H홀입니다. 리허설과 녹음이 한 건물 안에서 이어집니다.</p>
+    <div class="floors">
+      <div class="floor">
+        <div class="lv">2F<small>녹음실 G룸</small></div>
+        <div class="tx">
+          <h3>30여 종의 마이크, Big Six 콘솔, Core 47</h3>
+          <p>메인 콘솔룸, 보컬 부스, 세컨룸이 완전히 분리된 트리플 방음 구조. 상주 엔지니어가 녹음부터 마스터링까지 직접 진행합니다.</p>
+          <ul class="gear">
+            <li><b>Dynaudio Core 47</b><span>레퍼런스 모니터</span></li>
+            <li><b>SSL Big Six</b><span>아날로그 콘솔</span></li>
+            <li><b>Apollo x8</b><span>Universal Audio 인터페이스</span></li>
+            <li><b>마이크 30여 종</b><span>리본, 콘덴서, 다이나믹</span></li>
+            <li><b>Mac Studio</b><span>Pro Tools</span></li>
+            <li><b>트리플 방음</b><span>콘솔룸, 부스, 세컨룸 분리</span></li>
+            <li><b>24시간 예약제</b><span>장기 상주 프로젝트 가능</span></li>
+            <li><b>공영주차장 인접</b><span>장비 반입 용이</span></li>
+          </ul>
+        </div>
+        <div class="pics">
+          <button type="button" data-img="assets/img-05.jpg" data-t="메인 콘솔룸" aria-label="메인 콘솔룸 사진 크게 보기"><img src="assets/img-06.webp" width="2000" height="1500" alt="" loading="lazy"><em>메인 콘솔룸</em></button>
+          <button type="button" data-img="assets/img-07.jpg" data-t="보컬 부스" aria-label="보컬 부스 사진 크게 보기"><img src="assets/img-08.webp" width="720" height="960" alt="" loading="lazy"><em>보컬 부스</em></button>
+          <button type="button" data-img="assets/img-09.jpg" data-t="세컨룸" aria-label="세컨룸 사진 크게 보기"><img src="assets/img-10.webp" width="720" height="960" alt="" loading="lazy"><em>세컨룸</em></button>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="studio" id="studio">
-  <div class="wrap">
-    <div class="kicker rv"><span class="num">07</span>녹음실</div>
-    <h2 class="tw" data-text="30여 종의 마이크,|Big Six 콘솔, Core 47."></h2>
-    <p class="lead" style="color:#B8B8C0">메인 콘솔룸, 보컬 부스, 세컨룸이 완전히 분리된 트리플 방음 구조. 상주 엔지니어가 녹음부터 마스터링까지 직접 진행합니다.</p>
-    <div class="grid rv">
-      <div class="ph" data-img="assets/img-05.jpg" data-t="메인 콘솔룸"><img src="assets/img-06.webp" alt="메인 콘솔룸" loading="lazy" decoding="async"></div>
-      <div class="col">
-        <div class="ph" data-img="assets/img-07.jpg" data-t="보컬 부스"><img src="assets/img-08.webp" alt="보컬 부스" loading="lazy" decoding="async"></div>
-        <div class="ph" data-img="assets/img-09.jpg" data-t="세컨룸"><img src="assets/img-10.webp" alt="세컨룸" loading="lazy" decoding="async"></div>
-      </div>
-    </div>
-    <div class="gear rv d1">
-      <div><b>Dynaudio Core 47</b><span>레퍼런스 모니터</span></div>
-      <div><b>SSL Big Six</b><span>아날로그 콘솔</span></div>
-      <div><b>Apollo x8</b><span>Universal Audio 인터페이스</span></div>
-      <div><b>마이크 30여 종</b><span>리본 · 콘덴서 · 다이나믹</span></div>
-      <div><b>Mac Studio</b><span>Pro Tools</span></div>
-      <div><b>트리플 방음</b><span>콘솔룸 · 부스 · 세컨룸 분리</span></div>
-      <div><b>24시간 예약제</b><span>장기 상주 프로젝트 가능</span></div>
-      <div><b>공영주차장 인접</b><span>장비 반입 용이</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="spaces" id="spaces">
-  <div class="wrap">
-    <div class="kicker rv"><span class="num">08</span>공간 · 교육 · 공연</div>
-    <h2>제작에서 무대까지.</h2>
-    <div class="tiles">
-      <a class="tile rv" href="https://map.naver.com/p/search/%ED%85%8C%EB%84%B7%20%ED%95%A9%EC%A3%BC%EC%8B%A4" target="_blank" rel="noopener">
-        <div>
-          <h3>합주실 H홀</h3>
+      <div class="floor">
+        <div class="lv">B1<small>합주실 H홀</small></div>
+        <div class="tx">
+          <h3>H홀 합주실</h3>
           <p>Mesa Boogie, Markbass, Ludwig 드럼, MODX8+. 트리플 방음 합주실을 시간 단위로 예약합니다. 대학 동아리와 직장인 밴드용 회원권도 있습니다.</p>
         </div>
-        <div class="go">네이버로 예약하기 →</div>
-      </a>
-      <a class="tile rv d1" href="#contact">
-        <div>
-          <h3>밴드클럽</h3>
-          <p>팀 결성부터 합주, 공연까지 8주. 밴드마스터가 세션 구성을 잡고, 마지막 주에 실제 무대에 섭니다.</p>
+        <div class="side">
+          <p>리허설, 밴드클럽, 시간 단위 대관에 씁니다.</p>
+          <a class="btn pri" href="https://map.naver.com/p/search/%ED%85%8C%EB%84%B7%20%ED%95%A9%EC%A3%BC%EC%8B%A4" target="_blank" rel="noopener">네이버로 예약하기</a>
         </div>
-        <div class="go">참가 문의 →</div>
-      </a>
-      <a class="tile rv d2" href="https://www.instagram.com/tenet_ent/">
-        <div>
-          <h3>연극 〈가로묘지 주식회사〉</h3>
-          <p>집값에 밀려 묘지의 관을 빌려 사는 사람들 이야기. 작 황수아, 연출 정단아. 테넷이 주최·주관하는 무료 공연입니다.</p>
-        </div>
-        <div class="go">공연 소식 →</div>
-      </a>
+      </div>
+    </div>
+    <div class="ground" aria-hidden="true"></div>
+    <p class="near">도보 5분 거리 돌곶이로22길 50 2층에 MIMM 연습실 8룸. 6호선 돌곶이역, 1호선 석계역. 공영주차장 인접.</p>
+    <blockquote>
+      <p>좋은 장비보다 중요한 건 들을 줄 아는 감각입니다.</p>
+      <footer>오찬우, Chief Audio Engineer</footer>
+    </blockquote>
+  </div>
+</section>
+
+<section class="stage" id="spaces">
+  <div class="wrap">
+    <h2>제작에서 무대까지</h2>
+    <div class="g">
+      <article>
+        <span class="k">8주 프로그램</span>
+        <h3>밴드클럽</h3>
+        <p>팀 결성부터 합주, 공연까지 8주. 밴드마스터가 세션 구성을 잡고, 마지막 주에 실제 무대에 섭니다.</p>
+        <a class="txt" href="#contact">참가 문의하기</a>
+      </article>
+      <article>
+        <span class="k">주최·주관 공연</span>
+        <h3>연극 〈가로묘지 주식회사〉</h3>
+        <p>집값에 밀려 묘지의 관을 빌려 사는 사람들 이야기. 작 황수아, 연출 정단아. 테넷이 주최·주관하는 무료 공연입니다.</p>
+        <a class="txt" href="https://www.instagram.com/tenet_ent/" target="_blank" rel="noopener">인스타그램에서 공연 소식 보기</a>
+      </article>
     </div>
   </div>
 </section>
 
 <section class="team" id="team">
   <div class="wrap">
-    <div class="kicker rv"><span class="num">09</span>팀</div>
-    <h2>작곡, 세션, 녹음, 영상, 공연.<br>전부 한 건물에 있습니다.</h2>
-    <div class="people rv">
-      <div><b>이영민</b><span>공동대표<br><q>음악과 예술은 누군가의 가능성을 증명해내는 가장 순수한 방식입니다.</q></span></div>
-      <div><b>신주호</b><span>공동대표 · 프로듀서<br>호서대 실용음악 학사, 홍익대 대학원 실용음악 석사 과정</span></div>
-      <div><b>민요한</b><span>Chief Composer · 밴드마스터<br><q>좋은 시스템과 동료가 있다면 누구나 자신만의 음악을 만들 수 있다고 믿습니다.</q></span></div>
-      <div><b>오찬우</b><span>Chief Audio Engineer<br><q>소리는 정직합니다. 좋은 장비보다 중요한 건 들을 줄 아는 감각입니다.</q></span></div>
-      <div><b>임혜림</b><span>기획 · 연출 · 무대감독</span></div>
-    </div>
+    <h2>작곡, 세션, 녹음, 영상, 공연. 전부 한 건물에 있습니다.</h2>
+    <ul>
+      <li><b>이영민</b><span class="role">공동대표</span><p>“음악과 예술은 누군가의 가능성을 증명해내는 가장 순수한 방식입니다.”</p></li>
+      <li><b>신주호</b><span class="role">공동대표, 프로듀서</span><p>호서대 실용음악 학사, 홍익대 대학원 실용음악 석사 과정.</p></li>
+      <li><b>민요한</b><span class="role">Chief Composer, 밴드마스터</span><p>“좋은 시스템과 동료가 있다면 누구나 자신만의 음악을 만들 수 있다고 믿습니다.”</p></li>
+      <li><b>오찬우</b><span class="role">Chief Audio Engineer</span><p>“소리는 정직합니다. 좋은 장비보다 중요한 건 들을 줄 아는 감각입니다.”</p></li>
+      <li><b>임혜림</b><span class="role">기획, 연출, 무대감독</span></li>
+    </ul>
     <p class="fn">작곡·세션·보컬·레슨 인력은 서울예대, 동아방송대, 호원대, 서경대, 홍익대 실용음악과 출신으로 구성돼 있습니다.</p>
   </div>
 </section>
 
-<section class="cta" id="contact">
+<section class="press">
   <div class="wrap">
-    <div class="kicker" style="color:var(--bk);opacity:.7">제작 문의</div>
-    <h2>스튜디오에서 직접 확인해보세요. 진행 중인 콘텐츠 한 편으로 무료 테스트 녹음을 진행합니다.</h2>
-    <div class="row2">
-      <div class="tel">010-3081-3730<small>테넷 엔터테인먼트 · 서울 성북구 돌곶이로9길 14</small></div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a class="btn dk" href="tel:01030813730">전화하기</a>
-        <a class="btn dk" href="https://www.instagram.com/tenet_ent/" target="_blank" rel="noopener">인스타그램 DM</a>
-      </div>
-    </div>
-    <form class="form" id="inq" onsubmit="return false">
-      <h3>문의 남기기</h3>
-      <div><label>회사 · 소속 *</label><input name="org" required placeholder="예) 라프텔"></div>
-      <div><label>담당자 · 연락처 *</label><input name="who" required placeholder="이름, 전화 또는 이메일"></div>
-      <input name="website" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-      <div class="full"><label>필요한 것</label><input name="need" id="need" placeholder="위 계산기에서 체크한 항목이 자동으로 들어옵니다"></div>
-      <div class="full"><label>내용</label><textarea name="msg" placeholder="프로젝트 개요, 일정, 참고 링크"></textarea></div>
-      <div class="acts">
-        <button class="btn or" type="button" id="sendSms">문자로 보내기</button>
-        <button class="btn gh" type="button" id="copyMsg" style="border-color:rgba(255,255,255,.5)">내용 복사</button>
-        <span class="ok" id="okmsg"></span>
-      </div>
-      <div class="note">문자는 010-3081-3730으로 발송됩니다. 데스크톱에서는 내용을 복사해 카카오톡이나 이메일로 보내주세요.</div>
-    </form>
+    <blockquote>
+      <p>“탁월한 품질의 결과물을 제공하는 가성비 좋은 올인원 음악 서비스”</p>
+      <footer>더모스트타임즈, 2024.12.09, 신주호 대표 인터뷰. <a href="https://www.k-news25.co.kr/news/324623" target="_blank" rel="noopener">기사 전문 읽기</a></footer>
+    </blockquote>
   </div>
 </section>
 
-<footer>
+<section class="visit" id="visit">
   <div class="wrap">
-    <div class="cols">
-      <div class="brand">TENET ENTERTAINMENT<small>일반 녹음실이 아닙니다.<br>제작 프로덕션입니다.</small></div>
-      <div><h4>제작</h4><a href="#services">보컬·브랜드 음원</a><a href="#services">교육 콘텐츠 음원</a><a href="#services">AI 음성 데이터</a><a href="#services">악보·총보</a><a href="#services">유통·발매</a></div>
-      <div><h4>공간</h4><a href="https://map.naver.com/p/search/%ED%85%8C%EB%84%B7%20%ED%95%A9%EC%A3%BC%EC%8B%A4" target="_blank" rel="noopener">합주실 H홀 예약 (네이버)</a><a href="#contact">밴드클럽 문의</a><a href="#studio">녹음실 장비</a><a href="https://map.naver.com/p/search/돌곶이로9길%2014" target="_blank" rel="noopener">오시는 길</a></div>
-      <div><h4>회사</h4><a href="#team">팀</a><a href="#works">만든 것</a><a href="https://www.instagram.com/tenet_ent/" target="_blank" rel="noopener">Instagram</a><a href="privacy.html">개인정보 처리방침</a><a href="terms.html">이용약관</a></div>
-      <div><h4>연락</h4><a href="tel:01030813730">010-3081-3730</a><span>서울 성북구 돌곶이로9길 14<br>녹음실 · 합주실</span><span>돌곶이로22길 50 2F<br>MIMM 연습실</span></div>
+    <h2>석관동, 한예종 앞</h2>
+    <div class="g">
+      <div class="map">
+        <iframe src="https://www.google.com/maps?q=서울특별시+성북구+돌곶이로9길+14&amp;output=embed" loading="lazy" title="테넷 녹음실 위치" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div>
+        <dl>
+          <div><dt>녹음실 · 합주실</dt><dd>서울 성북구 돌곶이로9길 14<small>2층 녹음실(G룸), 지하 합주실(H홀)</small></dd></div>
+          <div><dt>연습실 MIMM</dt><dd>서울 성북구 돌곶이로22길 50, 2F<small>녹음실에서 도보 5분</small></dd></div>
+          <div><dt>주차</dt><dd>석관동 공영주차장 바로 옆<small>장비 반입 시 건물 앞 하차 가능</small></dd></div>
+          <div><dt>대중교통</dt><dd>6호선 돌곶이역, 1호선 석계역<small>석관동 새마을금고 정류장 하차</small></dd></div>
+          <div><dt>방문 상담</dt><dd>평일·주말 예약제<small>010-3081-3730으로 시간을 잡아주세요</small></dd></div>
+        </dl>
+        <div class="btns">
+          <a class="btn navy" href="https://map.naver.com/p/search/돌곶이로9길%2014" target="_blank" rel="noopener">네이버 지도에서 보기</a>
+          <a class="btn ink" href="tel:01030813730">전화로 시간 잡기</a>
+        </div>
+      </div>
     </div>
-    <div class="bot"><span>테넷 엔터테인먼트 · 대표 이영민 신주호 · 사업자등록번호 709-59-00653</span><span>© 2026 TENET Entertainment</span></div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <h2>와서 들어보고<br>결정하세요.</h2>
+        <p class="sub">스튜디오에서 직접 확인해보세요. 진행 중인 콘텐츠 한 편으로 무료 테스트 녹음을 진행합니다.</p>
+      </div>
+      <div>
+        <a class="tel" href="tel:01030813730">010-3081-3730</a>
+        <address>서울 성북구 돌곶이로9길 14, 방문은 예약제입니다.</address>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <p class="mk">TENET ENTERTAINMENT</p>
+        <p>일반 녹음실이 아닙니다. 제작 프로덕션입니다.</p>
+      </div>
+      <div>
+        <h3>제작</h3>
+        <ul>
+          <li><a href="#services">보컬·브랜드 음원</a></li>
+          <li><a href="#services">교육 콘텐츠 음원</a></li>
+          <li><a href="#services">AI 음성 데이터</a></li>
+          <li><a href="#services">악보·총보</a></li>
+          <li><a href="#services">유통·발매</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>공간</h3>
+        <ul>
+          <li><a href="https://map.naver.com/p/search/%ED%85%8C%EB%84%B7%20%ED%95%A9%EC%A3%BC%EC%8B%A4" target="_blank" rel="noopener">합주실 H홀 예약 (네이버)</a></li>
+          <li><a href="#contact">밴드클럽 문의</a></li>
+          <li><a href="#studio">녹음실 장비</a></li>
+          <li><a href="#visit">오시는 길</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>회사</h3>
+        <ul>
+          <li><a href="#team">팀</a></li>
+          <li><a href="#works">만든 것</a></li>
+          <li><a href="https://www.instagram.com/tenet_ent/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="privacy.html">개인정보 처리방침</a></li>
+          <li><a href="terms.html">이용약관</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>연락</h3>
+        <ul>
+          <li><a href="tel:01030813730">010-3081-3730</a></li>
+          <li>서울 성북구 돌곶이로9길 14<br>녹음실, 합주실</li>
+          <li>돌곶이로22길 50 2F<br>MIMM 연습실</li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal"><span>테넷 엔터테인먼트</span><span>대표 이영민 신주호</span><span>사업자등록번호 709-59-00653</span><span>© 2026 TENET Entertainment</span></p>
   </div>
 </footer>
 
-<script src="assets/three.min.js" defer></script>
-<script>
-// ── 헤드라인 플립 ───────────────────────────────
-(function(){
-  const words=['제작 프로덕션','세션 팀','악보 제작소','공연 기획사','발매 레이블','음성 데이터 파트너'];
-  const box=document.querySelector('.flip');let i=0;
-  setInterval(()=>{
-    const cur=box.querySelector('.flip-in');cur.classList.add('flip-out');
-    setTimeout(()=>{i=(i+1)%words.length;cur.textContent=words[i];cur.classList.remove('flip-out');cur.style.animation='none';void cur.offsetWidth;cur.style.animation='';},350);
-  },2600);
-})();
-// ── REC 타이머 ───────────────────────────────────
-(function(){
-  const el=document.getElementById('rectime');const t0=Date.now();
-  setInterval(()=>{const s=Math.floor((Date.now()-t0)/1000);const h=String(Math.floor(s/3600)).padStart(2,'0'),m=String(Math.floor(s%3600/60)).padStart(2,'0'),c=String(s%60).padStart(2,'0');el.textContent=h+':'+m+':'+c},500);
-})();
-// ── 3D 파문 링 ──────────────────────────────────
-function initRipple(){
-  const hero=document.querySelector('.hero');const cv=document.getElementById('orb');
-  const mobile=window.matchMedia('(max-width:860px)').matches;
-  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let gl=null;try{gl=cv.getContext('webgl')||cv.getContext('experimental-webgl')}catch(e){}
-  function showFallback(){hero.classList.add('nogl');const fb=hero.querySelector('.fallback');if(fb&&fb.dataset.src)fb.src=fb.dataset.src}
-  if(!gl||!window.THREE){showFallback();return}
-
-  const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true,powerPreference:'high-performance'});
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio,mobile?1.3:1.5));
-  const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x0B0B0D,0.045);
-  const cam=new THREE.PerspectiveCamera(42,1,0.1,100);
-
-  const RINGS=mobile?34:60, RMAX=9.5, R0=0.6;
-  const ringR=[];let total=0;
-  for(let i=0;i<RINGS;i++){const r=R0+(RMAX-R0)*(i/(RINGS-1));const cnt=Math.max(24,Math.round(r*(mobile?18:26)));ringR.push([r,cnt]);total+=cnt}
-  const pos=new Float32Array(total*3),col=new Float32Array(total*3),base=new Float32Array(total*2),ringIdx=new Uint16Array(total);
-  let k=0;for(let ri=0;ri<ringR.length;ri++){const [r,cnt]=ringR[ri];for(let j=0;j<cnt;j++){const a=j/cnt*Math.PI*2;const x=Math.cos(a)*r,z=Math.sin(a)*r;
-    pos[k*3]=x;pos[k*3+1]=0;pos[k*3+2]=z;base[k*2]=x;base[k*2+1]=z;ringIdx[k]=ri;col[k*3]=1;col[k*3+1]=.4;col[k*3+2]=.15;k++}}
-  const geo=new THREE.BufferGeometry();
-  geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
-  geo.setAttribute('color',new THREE.BufferAttribute(col,3));
-  const mat=new THREE.PointsMaterial({size:mobile?0.085:0.072,vertexColors:true,transparent:true,opacity:.95,sizeAttenuation:true,depthWrite:false});
-  const field=new THREE.Points(geo,mat);scene.add(field);
-  field.position.set(mobile?0:2.2, mobile?-.6:-1.2, 0);
-
-  // ── TENET 글자 타깃 ──
-  const tPts=(function(){const c2=document.createElement('canvas');c2.width=540;c2.height=150;const c=c2.getContext('2d');
-    c.fillStyle='#fff';c.font='900 116px Pretendard, sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillText('TENET',270,80);
-    const d=c.getImageData(0,0,540,150).data;const p=[];
-    for(let y=0;y<150;y+=3)for(let x=0;x<540;x+=3){if(d[(y*540+x)*4+3]>128)p.push([(x-270)/540*(mobile?6.2:6.0),(y-78)/150*(mobile?1.8:1.7)])}
-    return p})();
-  const nAssign=Math.min(tPts.length,total);
-  const assign=new Int32Array(total).fill(-1);
-  {const step=total/nAssign;for(let i=0;i<nAssign;i++){assign[Math.floor(i*step)]=i}}
-  const mixArr=new Float32Array(total);
-  let phase='idle',phaseT=0;
-  function formText(){if(phase==='idle'){phase='gather';phaseT=performance.now()}}
-  setTimeout(formText,1500);
-  const mark=document.querySelector('.nav .mark');if(mark){mark.style.cursor='pointer';mark.addEventListener('click',e=>{e.preventDefault();formText()})}
-
-  // ── 입력 ──
-  const m={x:0,y:0,tx:0,ty:0};const drops=[];let lastTrail=0,lastAct=performance.now();
-  const addDrop=(x,z,amp,big)=>{if(drops.length>26)drops.shift();drops.push({x,z,t:0,amp:amp||1,big})};
-  window.addEventListener('pointermove',e=>{m.tx=(e.clientX/window.innerWidth-.5)*2;m.ty=(e.clientY/window.innerHeight-.5)*2;
-    const now=performance.now();lastAct=now;
-    if(now-lastTrail>110){lastTrail=now;addDrop(m.tx*RMAX*.55,-m.ty*RMAX*.45,.5)}},{passive:true});
-  cv.addEventListener('pointerdown',()=>{lastAct=performance.now();addDrop(m.x*RMAX*.55,-m.y*RMAX*.45,1.15)});
-
-  // ── 오디오 ──
-  let analyser=null,fdata=null,level=0,bass=0,treb=0;const bands=new Float32Array(RINGS);
-  const btn=document.getElementById('micbtn');
-  btn.addEventListener('click',async()=>{
-    if(analyser){btn.classList.remove('on');btn.lastChild.textContent='소리 내보기';analyser=null;bands.fill(0);return}
-    try{const st=await navigator.mediaDevices.getUserMedia({audio:true});const ac=new (window.AudioContext||window.webkitAudioContext)();
-      const src=ac.createMediaStreamSource(st);analyser=ac.createAnalyser();analyser.fftSize=512;analyser.smoothingTimeConstant=.72;src.connect(analyser);fdata=new Uint8Array(analyser.frequencyBinCount);
-      btn.classList.add('on');btn.lastChild.textContent='듣는 중 · 말하거나 음악을 틀어보세요';
-    }catch(e){btn.lastChild.textContent='마이크 권한이 필요합니다'}
-  });
-
-  let active=true;new IntersectionObserver(en=>{active=en[0].isIntersecting}).observe(hero);
-  function resize(){const w=hero.clientWidth,h=hero.clientHeight;renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix()}
-  window.addEventListener('resize',resize);resize();
-
-  const P=geo.attributes.position.array,C=geo.attributes.color.array;
-  let t=0,pulse=0,lastRain=0,wN=0,wT=0,wLast=0,dead=false;
-  function frame(){
-    if(dead)return;requestAnimationFrame(frame);if(!active){wLast=0;return}
-    const now=performance.now();
-    if(wN<90){if(wLast&&now-wLast<500){wT+=now-wLast;wN++;if(wN>=90&&wT/wN>45){dead=true;renderer.dispose();cv.style.display='none';showFallback();return}}wLast=now}
-    t+=reduce?0.004:0.014;
-    m.x+=(m.tx-m.x)*.06;m.y+=(m.ty-m.y)*.06;
-    if(analyser){analyser.getByteFrequencyData(fdata);let s=0,b=0,h=0;const L=fdata.length;
-      for(let i=0;i<L;i++){s+=fdata[i];if(i<L*.12)b+=fdata[i];if(i>L*.5)h+=fdata[i]}
-      level+=((s/L/255)-level)*.3;bass+=((b/(L*.12)/255)-bass)*.35;treb+=((h/(L*.5)/255)-treb)*.3;
-      for(let ri=0;ri<RINGS;ri++){const bi=Math.floor(ri/RINGS*L*.72);const v=fdata[bi]/255;bands[ri]+=(v-bands[ri])*.35}
-      if(bass>.6&&pulse<=0){addDrop(0,0,1.5,true);pulse=16}pulse--;
-    } else {level*=.9;bass*=.9;treb*=.9;for(let ri=0;ri<RINGS;ri++)bands[ri]*=.9}
-    // 무입력 시 빗방울
-    if(now-lastAct>6000&&now-lastRain>1700){lastRain=now;addDrop((Math.random()*2-1)*RMAX*.6,(Math.random()*2-1)*RMAX*.5,.8)}
-    for(let i=drops.length-1;i>=0;i--){drops[i].t+=0.026;if(drops[i].t>2.4)drops.splice(i,1)}
-    // 글자 페이즈
-    if(phase==='gather'&&now-phaseT>1500){phase='hold';phaseT=now}
-    else if(phase==='hold'&&now-phaseT>2400){phase='release';phaseT=now}
-    else if(phase==='release'&&now-phaseT>1400){phase='idle'}
-    const gathering=(phase==='gather'||phase==='hold');
-
-    const mx=m.x*RMAX*.55, mz=-m.y*RMAX*.45;
-    for(let i=0;i<total;i++){
-      const x=base[i*2],z=base[i*2+1];const r=Math.hypot(x,z);const ri=ringIdx[i];
-      let y=Math.sin(r*1.35-t*2.2)*.22*(1+level*1.4)+Math.sin(r*.5+t*.8)*.12;
-      const dx=x-mx,dz=z-mz;y+=Math.exp(-(dx*dx+dz*dz)*.09)*.9;
-      for(const d of drops){const dd=Math.hypot(x-d.x,z-d.z);const ring=dd-d.t*5.5;y+=Math.exp(-ring*ring*1.6)*(d.amp*.9)*(1-d.t/2.4)}
-      y+=bands[ri]*1.15*Math.max(.25,1-r/RMAX)+bass*.4*Math.max(0,1-r/RMAX);
-      // 글자 모임
-      const ai=assign[i];
-      const target=(gathering&&ai>=0)?1:0;
-      const rate=.055+((i*7)%13)*.006;
-      mixArr[i]+=(target-mixArr[i])*rate;
-      const mix=mixArr[i];
-      let px=x,py=y,pz=z;
-      if(ai>=0&&mix>0.001){
-        const tx=tPts[ai][0]+(mobile?0:1.15);
-        const ty=(mobile?3.4:2.75)-tPts[ai][1]+.07*Math.sin(t*2+tx*1.3)+bands[ri]*.35;
-        const tz=0.6;
-        px=x+(tx-x)*mix;py=y+(ty-y)*mix;pz=z+(tz-z)*mix;
-      }
-      P[i*3]=px;P[i*3+1]=py;P[i*3+2]=pz;
-      const kk=Math.min(1,Math.max(0,(y+.4)/1.6));
-      const lit=Math.max(kk*.55,mix*.9);
-      C[i*3]=1;C[i*3+1]=.36+lit*.56+treb*.1;C[i*3+2]=.12+lit*.68;
-    }
-    geo.attributes.position.needsUpdate=true;geo.attributes.color.needsUpdate=true;
-    field.rotation.y+=(gathering?0:0.0012);
-    if(gathering){field.rotation.y*= .92}
-    cam.position.set(m.x*1.4,4.6+m.y*.5,9.2);cam.lookAt(field.position.x*.5,-.6,0);
-    renderer.render(scene,cam);
-  }
-  frame();
-}
-if(window.THREE)initRipple();else document.querySelector('script[src*=three]').addEventListener('load',initRipple);
-// infra builder
-(function(){
-  const chips=[...document.querySelectorAll('#chips button')];const list=document.getElementById('assign'),cnt=document.getElementById('cnt');
-  function update(){
-    const on=chips.filter(c=>c.classList.contains('on'));cnt.textContent=on.length;
-    list.innerHTML=on.map(c=>{const [p,sp]=c.dataset.who.split('|');const lab=c.textContent.trim();return `<li><b>${lab}</b><span>${p}${sp&&sp!=='—'?`<small>${sp}</small>`:''}</span></li>`}).join('')||'<li><span style="color:#7A7A83">항목을 고르면 담당이 표시됩니다</span></li>';
-  }
-  chips.forEach(c=>c.addEventListener('click',()=>{c.classList.toggle('on');update()}));
-  ['compose','vocal','session','rec','mix','dist'].forEach(n=>chips.find(c=>c.dataset.n===n).classList.add('on'));update();
-})();
-// count-up
-(function(){
-  const io=new IntersectionObserver(en=>{en.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,to=+el.dataset.to,t0=performance.now(),D=1400;
-    (function step(now){const p=Math.min(1,(now-t0)/D);const ease=1-Math.pow(1-p,3);el.textContent=Math.round(to*ease);if(p<1)requestAnimationFrame(step)})(t0);io.unobserve(el)})},{threshold:.6});
-  document.querySelectorAll('.cnt').forEach(e=>io.observe(e));
-})();
-// typewriter
-(function(){
-  const el=document.querySelector('.tw');if(!el)return;const lines=el.dataset.text.split('|');
-  const io=new IntersectionObserver(en=>{if(!en[0].isIntersecting)return;io.disconnect();let li=0,ci=0;el.innerHTML='';
-    (function tick(){if(li>=lines.length){el.classList.add('done');return}
-      const line=lines[li];if(ci<=line.length){const done=lines.slice(0,li).join('<br>');el.innerHTML=(done?done+'<br>':'')+line.slice(0,ci);ci++;setTimeout(tick,ci===1?0:45)}else{li++;ci=0;setTimeout(tick,260)}})();
-  },{threshold:.5});io.observe(el);
-})();
-// card tilt
-(function(){
-  if(window.matchMedia('(hover: none)').matches)return;
-  document.querySelectorAll('.w').forEach(card=>{
-    card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(900px) rotateX(${-y*6}deg) rotateY(${x*8}deg) translateY(-4px)`});
-    card.addEventListener('pointerleave',()=>{card.style.transform=''});
-  });
-})();
-// marquee pause
-(function(){const t=document.querySelector('.marq .track');if(!t)return;document.querySelector('.marq').addEventListener('pointerenter',()=>t.style.animationPlayState='paused');document.querySelector('.marq').addEventListener('pointerleave',()=>t.style.animationPlayState='running')})();
-// intro
-(function(){const el=document.getElementById('intro');const off=()=>el.classList.add('off');
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches||sessionStorage.getItem('seen')){el.remove();return}
-  sessionStorage.setItem('seen','1');setTimeout(off,1100);el.addEventListener('click',off)})();
-// progress
-(function(){const p=document.getElementById('prog');let raf=null;function upd(){raf=null;const h=document.documentElement;p.style.transform='scaleX('+(h.scrollTop/(h.scrollHeight-h.clientHeight))+')'}addEventListener('scroll',()=>{if(!raf)raf=requestAnimationFrame(upd)},{passive:true})})();
-// cursor
-(function(){const c=document.getElementById('cur');if(matchMedia('(hover:none)').matches)return;let x=0,y=0,tx=0,ty=0;
-  addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;c.classList.add('on')});addEventListener('pointerleave',()=>c.classList.remove('on'));
-  document.querySelectorAll('a,button,.chips button,.row,.w').forEach(el=>{el.addEventListener('pointerenter',()=>c.classList.add('big'));el.addEventListener('pointerleave',()=>c.classList.remove('big'))});
-  (function f(){x+=(tx-x)*.35;y+=(ty-y)*.35;c.style.transform=`translate(${x}px,${y}px) translate(-50%,-50%)`;requestAnimationFrame(f)})()})();
-// lightbox
-(function(){const lb=document.getElementById('lb'),f=document.getElementById('lbf'),t=document.getElementById('lbt');
-  const close=()=>{lb.classList.remove('open');f.src='';document.body.style.overflow=''};
-  document.querySelectorAll('[data-yt]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();t.textContent=a.dataset.t||'';f.src=`https://www.youtube.com/embed/${a.dataset.yt}?autoplay=1&rel=0`;lb.classList.add('open');document.body.style.overflow='hidden'}));
-  document.getElementById('lbx').addEventListener('click',close);lb.addEventListener('click',e=>{if(e.target===lb)close()});addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();
-// to top
-(function(){const b=document.getElementById('totop');addEventListener('scroll',()=>b.classList.toggle('on',scrollY>900),{passive:true});b.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}))})();
-// inquiry form
-(function(){const need=document.getElementById('need'),ok=document.getElementById('okmsg');
-  const chips=[...document.querySelectorAll('#chips button')];
-  const sync=()=>{need.value=chips.filter(c=>c.classList.contains('on')).map(c=>c.textContent.trim()).join(', ')};
-  chips.forEach(c=>c.addEventListener('click',sync));sync();
-  const build=()=>{const g=n=>document.querySelector(`#inq [name=${n}]`).value.trim();if(g('website'))return '';return `[테넷 제작 문의]\n회사: ${g('org')}\n담당: ${g('who')}\n필요한 것: ${g('need')}\n내용: ${g('msg')}`};
-  document.getElementById('sendSms').addEventListener('click',()=>{const f=document.getElementById('inq');if(!f.reportValidity())return;const b=build();if(!b)return;location.href='sms:01030813730?&body='+encodeURIComponent(b)});
-  document.getElementById('copyMsg').addEventListener('click',async()=>{const f=document.getElementById('inq');if(!f.reportValidity())return;try{await navigator.clipboard.writeText(build());ok.textContent='복사했습니다. 카톡이나 메일에 붙여넣어 주세요.'}catch(e){ok.textContent='복사가 안 되면 내용을 직접 선택해 주세요.'}setTimeout(()=>ok.textContent='',4000)})})();
-// D-day: 공연 첫날이 확정되면 #dday의 data-date에 YYYY-MM-DD를 넣는다
-(function(){const el=document.getElementById('dday');if(!el||!el.dataset.date)return;const t=new Date(el.dataset.date+'T00:00:00+09:00');if(isNaN(t))return;const d=Math.ceil((t-new Date())/864e5);el.textContent=d>0?`D-${d}`:(d===0?'D-Day':'')})();
-// works filter
-(function(){const bs=[...document.querySelectorAll('#filt button')],cards=[...document.querySelectorAll('.wgrid .w')];
-  bs.forEach(b=>b.addEventListener('click',()=>{bs.forEach(x=>x.classList.toggle('on',x===b));const f=b.dataset.f;cards.forEach(c=>c.classList.toggle('hide',f!=='all'&&c.dataset.cat!==f))}))})();
-// row tap expand (touch)
-(function(){if(!matchMedia('(hover:none)').matches)return;document.querySelectorAll('.row').forEach(r=>r.addEventListener('click',e=>{if(!r.classList.contains('open')){e.preventDefault();document.querySelectorAll('.row.open').forEach(x=>x.classList.remove('open'));r.classList.add('open')}}))})();
-// image lightbox
-(function(){const lb=document.getElementById('lb'),box=lb.querySelector('.box'),f=document.getElementById('lbf'),im=document.getElementById('lbi'),t=document.getElementById('lbt');
-  document.querySelectorAll('[data-img]').forEach(el=>el.addEventListener('click',()=>{box.classList.add('img');f.style.display='none';im.style.display='block';im.src=el.dataset.img;t.textContent=el.dataset.t||'';lb.classList.add('open');document.body.style.overflow='hidden'}));
-  const reset=()=>{box.classList.remove('img');f.style.display='';im.style.display='none';im.src=''};
-  document.getElementById('lbx').addEventListener('click',reset);lb.addEventListener('click',e=>{if(e.target===lb)reset()});addEventListener('keydown',e=>{if(e.key==='Escape')reset()})})();
-// 네이티브 스크롤 사용 (휠 하이재킹 없음)
-// magnetic buttons
-(function(){if(matchMedia('(hover:none)').matches)return;document.querySelectorAll('.btn').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.18,y=(e.clientY-r.top-r.height/2)*.28;b.style.transform=`translate(${x}px,${y}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')})})();
-// parallax
-(function(){const els=[...document.querySelectorAll('.cine img,.studio .ph img,.w.big img,.w.mid img')];if(!els.length)return;
-  els.forEach(el=>{el.style.willChange='transform'});
-  let raf=null;
-  function upd(){raf=null;const vh=innerHeight;els.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom<0||r.top>vh)return;const p=(r.top+r.height/2-vh/2)/vh;const amt=el.closest('.cine')?60:26;const base=el.closest('.cine')?1.12:(el.closest('.studio')?1.06:1);el.style.transform=`translate3d(0,${(-p*amt).toFixed(1)}px,0) scale(${base})`})}
-  function req(){if(!raf)raf=requestAnimationFrame(upd)}
-  addEventListener('scroll',req,{passive:true});addEventListener('resize',req);upd()})();
-// cursor labels
-(function(){const c=document.getElementById('cur'),l=document.getElementById('curl');if(!c||matchMedia('(hover:none)').matches)return;
-  const bind=(sel,txt)=>document.querySelectorAll(sel).forEach(el=>{el.addEventListener('pointerenter',()=>{c.classList.add('lab');l.textContent=txt});el.addEventListener('pointerleave',()=>{c.classList.remove('lab');l.textContent=''})});
-  bind('[data-yt]','듣기');bind('[data-img]','보기');bind('.w[href*="welove"]','열기')})();
-// seoul clock
-(function(){const el=document.getElementById('seoul');if(!el)return;const f=()=>{el.textContent='서울 '+new Date().toLocaleTimeString('ko-KR',{timeZone:'Asia/Seoul',hour:'2-digit',minute:'2-digit',hour12:false})};f();setInterval(f,15000)})();
-// ui sound (synth, off by default)
-(function(){const b=document.getElementById('snd');if(!b)return;let ac=null,on=false;
-  const beep=(f,d,g)=>{if(!on)return;ac=ac||new (AudioContext||webkitAudioContext)();const o=ac.createOscillator(),v=ac.createGain();o.type='sine';o.frequency.value=f;v.gain.value=0;o.connect(v);v.connect(ac.destination);const t=ac.currentTime;v.gain.linearRampToValueAtTime(g,t+.005);v.gain.exponentialRampToValueAtTime(.0001,t+d);o.start(t);o.stop(t+d)};
-  b.addEventListener('click',()=>{on=!on;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);b.lastChild.textContent=on?'SOUND ON':'SOUND OFF';if(on)beep(880,.08,.05)});
-  document.querySelectorAll('a,button,.chips button,.row,.w,summary').forEach(el=>{el.addEventListener('pointerenter',()=>beep(1320,.03,.012));el.addEventListener('click',()=>beep(660,.07,.04))})})();
-// horizontal works — 실제 가로 스크롤 레일 (휠·드래그·터치)
-(function(){const track=document.getElementById('htrack'),prog=document.getElementById('hprog');if(!track)return;
-  function upd(){const max=track.scrollWidth-track.clientWidth;if(prog)prog.style.width=(max>0?Math.min(1,track.scrollLeft/max)*100:0)+'%'}
-  track.addEventListener('scroll',upd,{passive:true});addEventListener('resize',upd);upd();
-  track.addEventListener('wheel',e=>{if(innerWidth<1100)return;if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){const max=track.scrollWidth-track.clientWidth;const at=track.scrollLeft;if((e.deltaY>0&&at>=max-1)||(e.deltaY<0&&at<=0))return;e.preventDefault();track.scrollLeft+=e.deltaY}},{passive:false});
-  let down=false,sx=0,sl=0,moved=false;
-  track.addEventListener('pointerdown',e=>{if(e.pointerType!=='mouse')return;down=true;moved=false;sx=e.clientX;sl=track.scrollLeft;track.style.cursor='grabbing'});
-  addEventListener('pointermove',e=>{if(!down)return;const dx=e.clientX-sx;if(Math.abs(dx)>5)moved=true;track.scrollLeft=sl-dx});
-  addEventListener('pointerup',()=>{down=false;track.style.cursor=''});
-  track.addEventListener('click',e=>{if(moved){e.preventDefault();e.stopPropagation();moved=false}},true)})();
-// device orientation parallax (mobile hero)
-(function(){if(!matchMedia('(hover:none)').matches||!window.DeviceOrientationEvent)return;const h=document.querySelector('.hero .wrap');if(!h)return;
-  addEventListener('deviceorientation',e=>{const x=Math.max(-1,Math.min(1,(e.gamma||0)/30)),y=Math.max(-1,Math.min(1,((e.beta||0)-45)/30));h.style.transform=`translate(${x*8}px,${y*6}px)`},{passive:true})})();
-// case modals
-(function(){const lb=document.getElementById('lb'),box=lb.querySelector('.box'),f=document.getElementById('lbf'),c=document.getElementById('lbc'),t=document.getElementById('lbt');
-  const data={'선거송':{k:'캠페인 음원 · 2026.05',h:'2026 지방선거 선거송',rows:[['의뢰','캠페인 측 다이렉트 의뢰 (비공개)'],['범위','작·편곡, 보컬 섭외, 녹음, 믹싱·마스터링, 납품'],['조건','선거 일정에 맞춘 단기 제작, 규격별 버전 납품'],['비고','후보·정당명은 계약상 비공개']]},
-    'KBS':{k:'방송 · 2025.05',h:'KBS 아는노래 녹화분',rows:[['범위','녹화분 편집, 피아노 제작, 믹싱, 송폼 편곡'],['형식','방송 규격 납품, 회차별 작업'],['비고','출연 아티스트 관련 상세는 비공개']]},
-    'AI':{k:'AI · 데이터 · 2026.09~',h:'AI 음악 소프트웨어 개발사 상주',rows:[['의뢰','AI 잡음 제거 VST와 스템 기반 DAW를 개발하는 스타트업'],['범위','레퍼런스 모니터링 환경, 녹음 테스트, 월 단위 대관'],['조건','우선 예약권, 세팅 유지, 정부 지원사업 정산 서류 대응'],['비고','상호는 계약상 비공개']]}};
-  document.querySelectorAll('[data-case]').forEach(el=>{const open=()=>{const d=data[el.dataset.case];if(!d)return;box.classList.add('case');f.style.display='none';c.style.display='block';t.textContent='';c.innerHTML=`<div class="k">${d.k}</div><h3>${d.h}</h3><dl>${d.rows.map(r=>`<dt>${r[0]}</dt><dd>${r[1]}</dd>`).join('')}</dl>`;lb.classList.add('open');document.body.style.overflow='hidden'};el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})});
-  const reset=()=>{box.classList.remove('case');c.style.display='none';f.style.display=''};
-  document.getElementById('lbx').addEventListener('click',reset);lb.addEventListener('click',e=>{if(e.target===lb)reset()});addEventListener('keydown',e=>{if(e.key==='Escape')reset()})})();
-// scroll reveal
-(function(){
-  const els=document.querySelectorAll('.rv');
-  const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'});
-  els.forEach(e=>io.observe(e));
-})();
-</script>
-<script>
-  // mobile menu
-  (function(){const nav=document.querySelector('.nav'),m=document.getElementById('mnav'),b=document.getElementById('burger');
-    b.addEventListener('click',()=>{nav.classList.toggle('open');m.classList.toggle('open');document.body.style.overflow=m.classList.contains('open')?'hidden':''});
-    m.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');m.classList.remove('open');document.body.style.overflow=''}))})();
-  // active nav
-  (function(){const links=[...document.querySelectorAll('.nav ul a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
-    const io=new IntersectionObserver(en=>{en.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+e.target.id))}})},{rootMargin:'-40% 0px -55% 0px'});
-    secs.forEach(s=>io.observe(s))})();
-  const nav=document.querySelector('.nav');const hero=document.querySelector('.hero');
-  const onS=()=>{nav.classList.toggle('dark',window.scrollY>hero.offsetHeight-80)};
-  window.addEventListener('scroll',onS,{passive:true});onS();
-</script>
+<div class="mbar off" id="mbar">
+  <a class="btn line" href="tel:01030813730">전화</a>
+  <a class="btn pri" href="#contact">제작 의뢰서 쓰기</a>
+</div>
 </body>
 </html>
